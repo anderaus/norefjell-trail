@@ -1,0 +1,1939 @@
+{
+  "version": "1.0",
+  "meta": {
+    "id": "norefjell-22k-2026",
+    "athlete": "Eiksmarka Løper",
+    "event": "Hoka Norefjell Trail 22K",
+    "eventDate": "2026-06-20",
+    "planStartDate": "2026-04-06",
+    "planEndDate": "2026-06-20",
+    "createdAt": "2026-03-31T12:00:00Z",
+    "totalWeeks": 11,
+    "generatedBy": "Claude Coach"
+  },
+  "preferences": {
+    "run": "kilometers",
+    "firstDayOfWeek": "monday"
+  },
+  "assessment": {
+    "foundation": {
+      "raceHistory": [
+        "Lommedalen Rundt 19km +672m — 2:09 (okt 2025)",
+        "Oslo Nightrun 9,7km +186m — 63min (nov 2025)",
+        "Grorudløpet Trail 11,5km +274m — 67min (mai 2025)",
+        "Ivar Formos Minneløp 16km +442m — 1:50 (okt 2024)",
+        "Sørkedalsløpet 10,8km +311m — 64min (aug 2025)",
+        "5km flatt løp — 22:08 (apr 2025)"
+      ],
+      "peakTrainingLoad": "60km/week (Oct 2025)",
+      "foundationLevel": "middels-avansert",
+      "yearsInSport": 5
+    },
+    "currentForm": {
+      "weeklyVolume": {
+        "total_km": 32.6,
+        "total_elev": 544,
+        "total_hours": 3.2
+      },
+      "longestRecentRun": {
+        "distance_km": 19.3,
+        "elevation_m": 358,
+        "date": "2026-03-21"
+      },
+      "consistency": "Byggende — siste 4 uker betydelig bedre enn 12-ukers snitt"
+    },
+    "strengths": [
+      {
+        "area": "Aerob motor",
+        "evidence": "5km på 22:08 → sterk terskel, ~4:40/km flatt"
+      },
+      {
+        "area": "Løypeerfaring",
+        "evidence": "Flere trail-løp opp til 19km, komfortabel på teknisk terreng"
+      },
+      {
+        "area": "Nedstigningskompetanse",
+        "evidence": "Håndterer teknisk nedstigning godt fra løpshistorikk"
+      },
+      {
+        "area": "Mental styrke",
+        "evidence": "Konsistent race-effort HR 170-176 i konkurranser"
+      }
+    ],
+    "limiters": [
+      {
+        "area": "Bakke-spesifikk form",
+        "evidence": "Eiksmarka er relativt flatt; løpet har 897m stigning"
+      },
+      {
+        "area": "Intensitetsfordeling",
+        "evidence": "2-årig snitt-HR på ALLE løp: 158,9 bpm — de fleste løp befinner seg i grå sone (S3)"
+      },
+      {
+        "area": "Volumujevnhet",
+        "evidence": "Store svingninger uke til uke; jan-feb 2026 svært sparsomt (1-2 løp/uke)"
+      },
+      {
+        "area": "Excentrisk quadricepsstyrke",
+        "evidence": "900m nedstigning krever quadricepsresiliens; ingen synlig styrketrening"
+      }
+    ],
+    "constraints": [
+      "Flatt hjemlig treningsområde (Eiksmarka)",
+      "Familieforpliktelser (barnehage-/skolekjøring)",
+      "Treningsdager: tirsdag, torsdag, lørdag, søndag (4 dager/uke)"
+    ]
+  },
+  "zones": {
+    "run": {
+      "hr": {
+        "lthr": 176,
+        "maxHR": 190,
+        "zones": [
+          {
+            "zone": 1,
+            "name": "Recovery",
+            "percentLow": 0,
+            "percentHigh": 81,
+            "hrLow": 0,
+            "hrHigh": 142
+          },
+          {
+            "zone": 2,
+            "name": "Aerobic",
+            "percentLow": 81,
+            "percentHigh": 89,
+            "hrLow": 143,
+            "hrHigh": 157
+          },
+          {
+            "zone": 3,
+            "name": "Tempo",
+            "percentLow": 90,
+            "percentHigh": 93,
+            "hrLow": 158,
+            "hrHigh": 164
+          },
+          {
+            "zone": 4,
+            "name": "Sub-threshold",
+            "percentLow": 94,
+            "percentHigh": 99,
+            "hrLow": 165,
+            "hrHigh": 174
+          },
+          {
+            "zone": "5a",
+            "name": "Threshold",
+            "percentLow": 100,
+            "percentHigh": 102,
+            "hrLow": 175,
+            "hrHigh": 179
+          },
+          {
+            "zone": "5b",
+            "name": "VO2max",
+            "percentLow": 103,
+            "percentHigh": 106,
+            "hrLow": 180,
+            "hrHigh": 186
+          }
+        ]
+      },
+      "pace": {
+        "easy_flat": "5:30-6:10/km",
+        "easy_trail": "6:00-7:30/km",
+        "aerobic": "5:10-5:30/km",
+        "tempo": "4:50-5:05/km",
+        "threshold": "4:35-4:50/km",
+        "vo2max": "4:10-4:25/km",
+        "hill_repeat_up": "effort-based (HR Z4-5a)",
+        "race_target": "7:30-8:30/km (grade-adjusted for climbs)"
+      }
+    }
+  },
+  "phases": [
+    {
+      "name": "Oppbygging",
+      "startWeek": 1,
+      "endWeek": 3,
+      "focus": "Etablere konsistent treningsvolum, innføre bakke-spesifikk trening, rebalansere lett/hardt-forholdet",
+      "weeklyHoursRange": {
+        "low": 4.0,
+        "high": 5.0
+      },
+      "keyWorkouts": [
+        "Ukentlig langtur på trail",
+        "Bakkeintervalløkt",
+        "Z2-grunnlagstur"
+      ],
+      "physiologicalGoals": [
+        "Øke ukentlig kilometervolum gradvis",
+        "Utvikle nevromuskulær klatreeffektivitet",
+        "Bygge ekte Z2-base"
+      ]
+    },
+    {
+      "name": "Restitusjonsuke",
+      "startWeek": 4,
+      "endWeek": 4,
+      "focus": "Absorbere oppbyggingsblokken, restituere og konsolidere",
+      "weeklyHoursRange": {
+        "low": 2.5,
+        "high": 3.2
+      },
+      "keyWorkouts": [
+        "Lett trailtur",
+        "Kort kvalitetsøkt"
+      ],
+      "physiologicalGoals": [
+        "Superkompensasjon",
+        "Ankomme uke 5 frisk og motivert"
+      ]
+    },
+    {
+      "name": "Spesifisitet",
+      "startWeek": 5,
+      "endWeek": 7,
+      "focus": "Løpsspesifikk trening — lange vedvarende klatringer, back-to-back-dager, terskelarbeid i bakke",
+      "weeklyHoursRange": {
+        "low": 5.0,
+        "high": 6.0
+      },
+      "keyWorkouts": [
+        "Race-simulering langtur (15-18km +600-800m)",
+        "Vedvarende klatreøkt",
+        "Back-to-back lør/søn"
+      ],
+      "physiologicalGoals": [
+        "Tilpasse seg vedvarende stigning",
+        "Trene quadriceps til nedstigningen",
+        "Bygge løpsspesifikk utholdenhet"
+      ]
+    },
+    {
+      "name": "Restitusjonsuke",
+      "startWeek": 8,
+      "endWeek": 8,
+      "focus": "Andre restitusjonsuke — absorbere spesifisitetsblokken",
+      "weeklyHoursRange": {
+        "low": 3.0,
+        "high": 3.5
+      },
+      "keyWorkouts": [
+        "Lett trail",
+        "Kort kvalitetsøkt"
+      ],
+      "physiologicalGoals": [
+        "Absorbere volum, ankomme toppuken frisk"
+      ]
+    },
+    {
+      "name": "Toppuke",
+      "startWeek": 9,
+      "endWeek": 9,
+      "focus": "Største uke — race-simulering, siste store stimulus før nedtrapping",
+      "weeklyHoursRange": {
+        "low": 5.5,
+        "high": 6.5
+      },
+      "keyWorkouts": [
+        "Lang race-sim tur 18-20km med klatringer",
+        "Siste terskeløkt på flatt"
+      ],
+      "physiologicalGoals": [
+        "Stimulus for toppform",
+        "Selvtillit fra lengste tur"
+      ]
+    },
+    {
+      "name": "Nedtrapping",
+      "startWeek": 10,
+      "endWeek": 11,
+      "focus": "Reduser volum 40-50%, behold intensitet, ankomme frisk",
+      "weeklyHoursRange": {
+        "low": 1.5,
+        "high": 3.5
+      },
+      "keyWorkouts": [
+        "Korte, skarpe kvalitetsøkter",
+        "Lett trail med race-tempo-surges"
+      ],
+      "physiologicalGoals": [
+        "CTL-vedlikehold, reduksjon av ATL",
+        "Beinfriskhet og mental beredskap"
+      ]
+    }
+  ],
+  "weeks": [
+    {
+      "weekNumber": 1,
+      "phase": "Oppbygging",
+      "startDate": "2026-04-06",
+      "endDate": "2026-04-12",
+      "focus": "Etablere 4-dagersrytmen. Lette dager virkelig lette. Første bakkeøkt torsdag.",
+      "targetHours": 4.2,
+      "isRecoveryWeek": false,
+      "days": [
+        {
+          "date": "2026-04-06",
+          "dayOfWeek": "Mandag",
+          "workouts": [
+            {
+              "id": "w1-mon-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Hvile / Styrke",
+              "description": "Full hvile, eller valgfri 20min styrke: 3×15 step-downs, 3×12 Bulgarian split squats, 2×15 tåhev.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-04-07",
+          "dayOfWeek": "Tirsdag",
+          "workouts": [
+            {
+              "id": "w1-tue-easy",
+              "sport": "run",
+              "type": "easy",
+              "name": "Lett Z2-løp",
+              "description": "6km ved ekte sone 2 (HR 143-157). Fossumrunden eller barnehage-/skolerunden. Går du i bakker og HR kryper over 157 — gå til fots. Dette vil kjennes sakte. Det er meningen.",
+              "durationMinutes": 40,
+              "distanceKm": 6,
+              "primaryZone": "Sone 2",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-04-08",
+          "dayOfWeek": "Onsdag",
+          "workouts": [
+            {
+              "id": "w1-wed-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Hvile",
+              "description": "Full hvile.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-04-09",
+          "dayOfWeek": "Torsdag",
+          "workouts": [
+            {
+              "id": "w1-thu-hills",
+              "sport": "run",
+              "type": "hill_repeat",
+              "name": "Bakkeintervaller — introduksjon",
+              "description": "Gruppefallback (hvis gruppetreningen avlyses): Kjør til Kolsåstoppen eller Vettakollen. 2km oppvarming, 6×90sek opp i S4-innsats (HR 165-174), gå ned som restitusjon, 2km nedjogg. Totalt ~8km +200m. Fokus: framoverlent kropp, korte raske steg, aktiv armdrive.",
+              "durationMinutes": 55,
+              "distanceKm": 8,
+              "elevation": 200,
+              "primaryZone": "Sone 4 på drag, Sone 2 ellers",
+              "groupAlternative": "Følg gruppens økt (flat grus). Typisk: 6×3min p:90sek eller 4×4min p:2min.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-04-10",
+          "dayOfWeek": "Fredag",
+          "workouts": [
+            {
+              "id": "w1-fri-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Hvile",
+              "description": "Full hvile før helgdoubl.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-04-11",
+          "dayOfWeek": "Lørdag",
+          "workouts": [
+            {
+              "id": "w1-sat-trail",
+              "sport": "run",
+              "type": "trail_medium",
+              "name": "Medium trailtur",
+              "description": "13-14km trail, HR 150-165. Hilderunden eller Sæteren-Nygård-Skytterkollen. Avslappet løping, ikke press på tempo. Gel hvis du er ute over 75 min.",
+              "durationMinutes": 90,
+              "distanceKm": 14,
+              "elevation": 280,
+              "primaryZone": "Sone 2-3",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-04-12",
+          "dayOfWeek": "Søndag",
+          "workouts": [
+            {
+              "id": "w1-sun-long",
+              "sport": "run",
+              "type": "long",
+              "name": "Langtur — 15km",
+              "description": "15km, Z2-innsats (HR 143-157 mesteparten). Ta med vann. Brunkollen eller Bogstadvannet-runden.",
+              "durationMinutes": 95,
+              "distanceKm": 15,
+              "elevation": 220,
+              "primaryZone": "Sone 2",
+              "completed": false
+            }
+          ]
+        }
+      ],
+      "summary": {
+        "totalHours": 4.2,
+        "bySport": {
+          "run": {
+            "sessions": 4,
+            "hours": 4.2,
+            "km": 43,
+            "elev": 500
+          }
+        }
+      }
+    },
+    {
+      "weekNumber": 2,
+      "phase": "Oppbygging",
+      "startDate": "2026-04-13",
+      "endDate": "2026-04-19",
+      "focus": "Lengre bakkeintervaller torsdag. Første back-to-back-helg lør/søn.",
+      "targetHours": 4.5,
+      "isRecoveryWeek": false,
+      "days": [
+        {
+          "date": "2026-04-13",
+          "dayOfWeek": "Mandag",
+          "workouts": [
+            {
+              "id": "w2-mon-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Hvile / Styrke",
+              "description": "Hvil. Valgfri styrke: 3×15 step-downs hvert ben, 3×12 ettbens markløft, 2×20 tåhev.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-04-14",
+          "dayOfWeek": "Tirsdag",
+          "workouts": [
+            {
+              "id": "w2-tue-easy",
+              "sport": "run",
+              "type": "easy",
+              "name": "Lett Z2-løp",
+              "description": "7km lett, HR 143-157. Restitusjon etter søndagsturen — hold det genuint lett.",
+              "durationMinutes": 44,
+              "distanceKm": 7,
+              "primaryZone": "Sone 2",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-04-15",
+          "dayOfWeek": "Onsdag",
+          "workouts": [
+            {
+              "id": "w2-wed-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Hvile",
+              "description": "Full hvile.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-04-16",
+          "dayOfWeek": "Torsdag",
+          "workouts": [
+            {
+              "id": "w2-thu-tempo",
+              "sport": "run",
+              "type": "threshold",
+              "name": "Terskelintervaller (flat grus)",
+              "description": "Gruppefallback: 3×8min terskel (4:35-4:50/km, HR 175-179), 3min jogg mellom. 2km oppvarming + 2km nedjogg. Flat grus/vei, totalt ~12km.\nGruppetrening: følg dagens økt.",
+              "durationMinutes": 60,
+              "distanceKm": 12,
+              "primaryZone": "Sone 5a",
+              "groupAlternative": "Følg gruppens økt. Typisk: 8×3min p:90sek eller 5×1km p:400m.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-04-17",
+          "dayOfWeek": "Fredag",
+          "workouts": [
+            {
+              "id": "w2-fri-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Hvile",
+              "description": "Full hvile. Stor helg i morgen.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-04-18",
+          "dayOfWeek": "Lørdag",
+          "workouts": [
+            {
+              "id": "w2-sat-hills",
+              "sport": "run",
+              "type": "hill_repeat",
+              "name": "Trail med bakkefokus",
+              "description": "12km trail med maks bakker — Lysakerelva-dalen, Kolsåstoppen eller Krokskogen. Mål 300-350m stigning. Press bakkene til Z3-4, lett på flatt og nedover. Øv power-hiking i de bratteste partiene.",
+              "durationMinutes": 80,
+              "distanceKm": 12,
+              "elevation": 320,
+              "primaryZone": "Sone 2-4",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-04-19",
+          "dayOfWeek": "Søndag",
+          "workouts": [
+            {
+              "id": "w2-sun-long",
+              "sport": "run",
+              "type": "long",
+              "name": "Langtur — 17km",
+              "description": "17km, Z2-innsats snitt (HR ~150-162). Brunkollen-runden eller Bogstadvannet + loop. Spis noe før og ta med en gel. Planens første lengre langtur.",
+              "durationMinutes": 107,
+              "distanceKm": 17,
+              "elevation": 310,
+              "primaryZone": "Sone 2-3",
+              "completed": false
+            }
+          ]
+        }
+      ],
+      "summary": {
+        "totalHours": 4.5,
+        "bySport": {
+          "run": {
+            "sessions": 4,
+            "hours": 4.5,
+            "km": 48,
+            "elev": 750
+          }
+        }
+      }
+    },
+    {
+      "weekNumber": 3,
+      "phase": "Oppbygging",
+      "startDate": "2026-04-20",
+      "endDate": "2026-04-26",
+      "focus": "Topp av oppbyggingsblokken. Lengre bakkeintervaller, 18km langtur.",
+      "targetHours": 4.8,
+      "isRecoveryWeek": false,
+      "days": [
+        {
+          "date": "2026-04-20",
+          "dayOfWeek": "Mandag",
+          "workouts": [
+            {
+              "id": "w3-mon-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Hvile",
+              "description": "Full hvile etter søndagens lange tur.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-04-21",
+          "dayOfWeek": "Tirsdag",
+          "workouts": [
+            {
+              "id": "w3-tue-easy",
+              "sport": "run",
+              "type": "easy",
+              "name": "Lett Z2-løp",
+              "description": "7km lett, HR 143-157. Hold disiplinen — dette er restitusjon, ikke tempo.",
+              "durationMinutes": 44,
+              "distanceKm": 7,
+              "primaryZone": "Sone 2",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-04-22",
+          "dayOfWeek": "Onsdag",
+          "workouts": [
+            {
+              "id": "w3-wed-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Hvile",
+              "description": "Hvil.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-04-23",
+          "dayOfWeek": "Torsdag",
+          "workouts": [
+            {
+              "id": "w3-thu-hills",
+              "sport": "run",
+              "type": "hill_repeat",
+              "name": "Lange bakkeintervaller — S4-5a",
+              "description": "Gruppefallback: Kolsåstoppen eller Vettakollen. 2km oppvarming, 8×2min opp i S4 (HR 165-174), full nedjogg-restitusjon, 2km nedjogg. Øv power-hiking på de bratteste 30%-partiene. Totalt ~10km +260m.\nGruppetrening: følg gruppens økt.",
+              "durationMinutes": 65,
+              "distanceKm": 10,
+              "elevation": 260,
+              "primaryZone": "Sone 4",
+              "groupAlternative": "Følg gruppens økt. Typisk: 10×2min p:60sek eller pyramideintervaller.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-04-24",
+          "dayOfWeek": "Fredag",
+          "workouts": [
+            {
+              "id": "w3-fri-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Hvile",
+              "description": "Hvil.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-04-25",
+          "dayOfWeek": "Lørdag",
+          "workouts": [
+            {
+              "id": "w3-sat-trail",
+              "sport": "run",
+              "type": "trail_medium",
+              "name": "Bratt trail — søk høydemeter",
+              "description": "13km trail med maks stigning. Mål 360-400m. Skytterkollen-Nygård-Sæteren eller Lysakerelva-Brunkollen. Press bakkene Z3-4, lett på flatt.",
+              "durationMinutes": 88,
+              "distanceKm": 13,
+              "elevation": 370,
+              "primaryZone": "Sone 2-4",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-04-26",
+          "dayOfWeek": "Søndag",
+          "workouts": [
+            {
+              "id": "w3-sun-long",
+              "sport": "run",
+              "type": "long",
+              "name": "Langtur — 18km med fartsvariasjon",
+              "description": "18km. Første 12km lett Z2, siste 6km i aerob innsats Z3 (HR 158-164). Mimikerer Norefjell-distansen. Spis før, ta gel etter 60-70min.",
+              "durationMinutes": 115,
+              "distanceKm": 18,
+              "elevation": 340,
+              "primaryZone": "Sone 2-3",
+              "completed": false
+            }
+          ]
+        }
+      ],
+      "summary": {
+        "totalHours": 4.8,
+        "bySport": {
+          "run": {
+            "sessions": 4,
+            "hours": 4.8,
+            "km": 48,
+            "elev": 970
+          }
+        }
+      }
+    },
+    {
+      "weekNumber": 4,
+      "phase": "Restitusjonsuke",
+      "startDate": "2026-04-27",
+      "endDate": "2026-05-03",
+      "focus": "Planlagt restitusjonsuke. 30% volumreduksjon. La formen konsolidere seg.",
+      "targetHours": 3.0,
+      "isRecoveryWeek": true,
+      "days": [
+        {
+          "date": "2026-04-27",
+          "dayOfWeek": "Mandag",
+          "workouts": [
+            {
+              "id": "w4-mon-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Hvile",
+              "description": "Full hvile. Stol på prosessen.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-04-28",
+          "dayOfWeek": "Tirsdag",
+          "workouts": [
+            {
+              "id": "w4-tue-easy",
+              "sport": "run",
+              "type": "easy",
+              "name": "Lett Z2-løp",
+              "description": "5km veldig lett, HR <150. Kun en ristetur.",
+              "durationMinutes": 32,
+              "distanceKm": 5,
+              "primaryZone": "Sone 1-2",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-04-29",
+          "dayOfWeek": "Onsdag",
+          "workouts": [
+            {
+              "id": "w4-wed-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Hvile / Lett styrke",
+              "description": "Hvil eller lett styrke: 2×15 step-downs, 2×10 Bulgarian split squats.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-04-30",
+          "dayOfWeek": "Torsdag",
+          "workouts": [
+            {
+              "id": "w4-thu-fartlek",
+              "sport": "run",
+              "type": "fartlek",
+              "name": "Fartlek — hold skarpheten",
+              "description": "Gruppefallback: 8km med 5×45sek surges på terskelfarr (4:40/km), lang restitusjonsjogg. Ikke akkumuler tretthet denne uka.\nGruppetrening: følg gruppens økt, men hold litt igjen — det er restitusjonsuke.",
+              "durationMinutes": 48,
+              "distanceKm": 8,
+              "primaryZone": "Sone 2-4",
+              "groupAlternative": "Følg gruppens økt. Hold igjen 10-15% av normal innsats.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-01",
+          "dayOfWeek": "Fredag",
+          "workouts": [
+            {
+              "id": "w4-fri-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Hvile",
+              "description": "Hvil.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-02",
+          "dayOfWeek": "Lørdag",
+          "workouts": [
+            {
+              "id": "w4-sat-easy",
+              "sport": "run",
+              "type": "trail_easy",
+              "name": "Lett trailtur",
+              "description": "10km lett trail, HR 143-157. Hilderunden eller lignende. Nyt det — ingen press.",
+              "durationMinutes": 63,
+              "distanceKm": 10,
+              "elevation": 190,
+              "primaryZone": "Sone 2",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-03",
+          "dayOfWeek": "Søndag",
+          "workouts": [
+            {
+              "id": "w4-sun-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Hvile / Familie",
+              "description": "Hvil. Familietid. Spesifisitetsblokken starter mandag.",
+              "completed": false
+            }
+          ]
+        }
+      ],
+      "summary": {
+        "totalHours": 3.0,
+        "bySport": {
+          "run": {
+            "sessions": 3,
+            "hours": 3.0,
+            "km": 23,
+            "elev": 190
+          }
+        }
+      }
+    },
+    {
+      "weekNumber": 5,
+      "phase": "Spesifisitet",
+      "startDate": "2026-05-04",
+      "endDate": "2026-05-10",
+      "focus": "Spesifisitetsblokken starter. Første vedvarende klatreøkt lørdag.",
+      "targetHours": 5.0,
+      "isRecoveryWeek": false,
+      "days": [
+        {
+          "date": "2026-05-04",
+          "dayOfWeek": "Mandag",
+          "workouts": [
+            {
+              "id": "w5-mon-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Hvile",
+              "description": "Hvil.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-05",
+          "dayOfWeek": "Tirsdag",
+          "workouts": [
+            {
+              "id": "w5-tue-easy",
+              "sport": "run",
+              "type": "easy",
+              "name": "Lett Z2-løp",
+              "description": "6km lett, HR 143-157. Du bør ankomme torsdagens gruppetrening uthvilt.",
+              "durationMinutes": 38,
+              "distanceKm": 6,
+              "primaryZone": "Sone 2",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-06",
+          "dayOfWeek": "Onsdag",
+          "workouts": [
+            {
+              "id": "w5-wed-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Hvile",
+              "description": "Hvil.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-07",
+          "dayOfWeek": "Torsdag",
+          "workouts": [
+            {
+              "id": "w5-thu-intervals",
+              "sport": "run",
+              "type": "threshold",
+              "name": "Terskelintervaller (flat grus)",
+              "description": "Gruppefallback: 3×10min terskel (HR 175-179), 4min jogg mellom. 2km oppvarming + 2km nedjogg. Litt lengre drag enn uke 2 for å bygge terskelkapasitet.\nGruppetrening: følg dagens økt.",
+              "durationMinutes": 65,
+              "distanceKm": 13,
+              "primaryZone": "Sone 5a",
+              "groupAlternative": "Følg gruppens økt. Typisk: 6×4min, 4×8min eller 8×3min.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-08",
+          "dayOfWeek": "Fredag",
+          "workouts": [
+            {
+              "id": "w5-fri-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Hvile",
+              "description": "Hvil.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-09",
+          "dayOfWeek": "Lørdag",
+          "workouts": [
+            {
+              "id": "w5-sat-climb",
+              "sport": "run",
+              "type": "sustained_climb",
+              "name": "🏔️ Vedvarende klatreøkt — Norefjell-spesifikk",
+              "description": "BLOKKENS NØKKELØKT. Kjør til Kolsåstoppen, Vettakollen eller Krokskogen. 2km oppvarming, deretter 2× vedvarende 20-25min klatring i race-innsats (HR 158-174), lett nedjogg mellom. Øv effektiv power-hiking på bratteste partier. Totalt ~11km +450m.",
+              "durationMinutes": 80,
+              "distanceKm": 11,
+              "elevation": 450,
+              "primaryZone": "Sone 3-4 opp, Sone 1-2 ned",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-10",
+          "dayOfWeek": "Søndag",
+          "workouts": [
+            {
+              "id": "w5-sun-long",
+              "sport": "run",
+              "type": "long",
+              "name": "Langtur — 18km",
+              "description": "18km, første 12km lett Z2, siste 6km Z3 aerob. Finn en rute med ~400m stigning. Brunkollen-Skuta eller lignende. Gel ved 60 og 90min.",
+              "durationMinutes": 120,
+              "distanceKm": 18,
+              "elevation": 380,
+              "primaryZone": "Sone 2-3",
+              "completed": false
+            }
+          ]
+        }
+      ],
+      "summary": {
+        "totalHours": 5.0,
+        "bySport": {
+          "run": {
+            "sessions": 4,
+            "hours": 5.0,
+            "km": 48,
+            "elev": 830
+          }
+        }
+      }
+    },
+    {
+      "weekNumber": 6,
+      "phase": "Spesifisitet",
+      "startDate": "2026-05-11",
+      "endDate": "2026-05-17",
+      "focus": "Høyest spesifisitetsuke. Race-simulering lørdag. Back-to-back lør/søn.",
+      "targetHours": 5.5,
+      "isRecoveryWeek": false,
+      "days": [
+        {
+          "date": "2026-05-11",
+          "dayOfWeek": "Mandag",
+          "workouts": [
+            {
+              "id": "w6-mon-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Hvile / Styrke",
+              "description": "Hvil. Valgfri styrke: 3×15 ettbens step-downs, 3×10 reverse lunges.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-12",
+          "dayOfWeek": "Tirsdag",
+          "workouts": [
+            {
+              "id": "w6-tue-easy",
+              "sport": "run",
+              "type": "easy",
+              "name": "Lett Z2-løp",
+              "description": "7km lett, HR 143-157. Hold det ærlig — ingen tempo-overraskelser denne uka.",
+              "durationMinutes": 44,
+              "distanceKm": 7,
+              "primaryZone": "Sone 2",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-13",
+          "dayOfWeek": "Onsdag",
+          "workouts": [
+            {
+              "id": "w6-wed-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Hvile",
+              "description": "Hvil.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-14",
+          "dayOfWeek": "Torsdag",
+          "workouts": [
+            {
+              "id": "w6-thu-intervals",
+              "sport": "run",
+              "type": "threshold",
+              "name": "Terskelintervaller (flat grus)",
+              "description": "Gruppefallback: 2×15min terskel (HR 175-179), 5min jogg mellom. Lengste terskelintervaller i planen — bygger terskelkapasitet til klatringen. 2km oppvarming + 2km nedjogg.\nGruppetrening: følg dagens økt.",
+              "durationMinutes": 68,
+              "distanceKm": 13,
+              "primaryZone": "Sone 5a",
+              "groupAlternative": "Følg gruppens økt. Typisk: 4×10min eller 3×12min.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-15",
+          "dayOfWeek": "Fredag",
+          "workouts": [
+            {
+              "id": "w6-fri-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Hvile",
+              "description": "Full hvile. Stor race-simulering i morgen.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-16",
+          "dayOfWeek": "Lørdag",
+          "workouts": [
+            {
+              "id": "w6-sat-race-sim",
+              "sport": "run",
+              "type": "race_simulation",
+              "name": "🏔️ RACE-SIMULERING — 15km +600m",
+              "description": "NØKKELØKT. Krokskogen, Nordmarka eller Norefjell-området. 15km med 550-700m stigning i race-innsats. Km 0-5 moderat (HR 155-162), km 5-12 klatre hardt (HR 165-174), siste 3km rask kontrollert nedstigning. Gel ved 40 og 80min. Bruk race-utstyr. Dette er din viktigste selvtillitsøkt.",
+              "durationMinutes": 130,
+              "distanceKm": 15,
+              "elevation": 600,
+              "primaryZone": "Sone 3-4",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-17",
+          "dayOfWeek": "Søndag",
+          "workouts": [
+            {
+              "id": "w6-sun-back2back",
+              "sport": "run",
+              "type": "back_to_back",
+              "name": "Back-to-back — Lett trail (17. mai 🎉)",
+              "description": "Gratulerer med dagen! 10km lett trail for å riste av lørdagens race-sim. HR 143-157. Hilderunden eller langs fjorden. Beina vil kjennes tunge — det er hele poenget med back-to-back. Bygger race-dag-resiliens.",
+              "durationMinutes": 65,
+              "distanceKm": 10,
+              "elevation": 200,
+              "primaryZone": "Sone 2",
+              "completed": false
+            }
+          ]
+        }
+      ],
+      "summary": {
+        "totalHours": 5.5,
+        "bySport": {
+          "run": {
+            "sessions": 4,
+            "hours": 5.5,
+            "km": 45,
+            "elev": 800
+          }
+        }
+      }
+    },
+    {
+      "weekNumber": 7,
+      "phase": "Spesifisitet",
+      "startDate": "2026-05-18",
+      "endDate": "2026-05-24",
+      "focus": "Siste spesifisitetsuke. Lange bakkeintervaller lørdag, 19km langtur søndag.",
+      "targetHours": 5.2,
+      "isRecoveryWeek": false,
+      "days": [
+        {
+          "date": "2026-05-18",
+          "dayOfWeek": "Mandag",
+          "workouts": [
+            {
+              "id": "w7-mon-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Hvile",
+              "description": "Full hvile etter back-to-back-helgen.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-19",
+          "dayOfWeek": "Tirsdag",
+          "workouts": [
+            {
+              "id": "w7-tue-easy",
+              "sport": "run",
+              "type": "easy",
+              "name": "Lett Z2-løp",
+              "description": "6km lett, HR 143-157. Restitusjon etter krevende helg.",
+              "durationMinutes": 38,
+              "distanceKm": 6,
+              "primaryZone": "Sone 2",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-20",
+          "dayOfWeek": "Onsdag",
+          "workouts": [
+            {
+              "id": "w7-wed-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Hvile",
+              "description": "Hvil.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-21",
+          "dayOfWeek": "Torsdag",
+          "workouts": [
+            {
+              "id": "w7-thu-intervals",
+              "sport": "run",
+              "type": "hill_repeat",
+              "name": "VO2maks-intervaller (flat grus)",
+              "description": "Gruppefallback: 6×4min i VO2maks-innsats (HR 180-186, ~4:10-4:20/km), 3min jogg mellom. 2km oppvarming + 2km nedjogg. Kortere og hardere enn terskelintervaller — bygger aerob kapasitet.\nGruppetrening: følg dagens økt.",
+              "durationMinutes": 60,
+              "distanceKm": 12,
+              "primaryZone": "Sone 5b",
+              "groupAlternative": "Følg gruppens økt. Typisk: 8×3min, 6×4min eller 10×2min.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-22",
+          "dayOfWeek": "Fredag",
+          "workouts": [
+            {
+              "id": "w7-fri-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Hvile",
+              "description": "Hvil.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-23",
+          "dayOfWeek": "Lørdag",
+          "workouts": [
+            {
+              "id": "w7-sat-hills",
+              "sport": "run",
+              "type": "hill_repeat",
+              "name": "Lange bakkeintervaller — løpsspesifikk klatring",
+              "description": "Kolsåstoppen eller Vettakollen. 2km oppvarming, 5×4min opp i S4 (HR 165-174), 3-4min nedjogg mellom. Power-hike de bratteste partiene. 2km nedjogg. Totalt ~11km +320m.",
+              "durationMinutes": 70,
+              "distanceKm": 11,
+              "elevation": 320,
+              "primaryZone": "Sone 4",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-24",
+          "dayOfWeek": "Søndag",
+          "workouts": [
+            {
+              "id": "w7-sun-long",
+              "sport": "run",
+              "type": "long",
+              "name": "Langtur — 19km +400m",
+              "description": "19km, mål 400m stigning. Brunkollen + Skuta + Fossum, eller Bogstadvannet + stor runde. Første 13km lett Z2, siste 6km Z3 aerob. Nær Norefjell-distansen — viktig for selvtilliten. Gel hvert 45-50min.",
+              "durationMinutes": 125,
+              "distanceKm": 19,
+              "elevation": 420,
+              "primaryZone": "Sone 2-3",
+              "completed": false
+            }
+          ]
+        }
+      ],
+      "summary": {
+        "totalHours": 5.2,
+        "bySport": {
+          "run": {
+            "sessions": 4,
+            "hours": 5.2,
+            "km": 48,
+            "elev": 740
+          }
+        }
+      }
+    },
+    {
+      "weekNumber": 8,
+      "phase": "Restitusjonsuke",
+      "startDate": "2026-05-25",
+      "endDate": "2026-05-31",
+      "focus": "Andre restitusjonsuke. Absorbere 3 harde uker. Ankomme toppuken frisk.",
+      "targetHours": 3.0,
+      "isRecoveryWeek": true,
+      "days": [
+        {
+          "date": "2026-05-25",
+          "dayOfWeek": "Mandag",
+          "workouts": [
+            {
+              "id": "w8-mon-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Hvile",
+              "description": "Full hvile. Du har fortjent det.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-26",
+          "dayOfWeek": "Tirsdag",
+          "workouts": [
+            {
+              "id": "w8-tue-easy",
+              "sport": "run",
+              "type": "easy",
+              "name": "Lett Z2",
+              "description": "5km lett, HR <150.",
+              "durationMinutes": 32,
+              "distanceKm": 5,
+              "primaryZone": "Sone 1-2",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-27",
+          "dayOfWeek": "Onsdag",
+          "workouts": [
+            {
+              "id": "w8-wed-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Hvile",
+              "description": "Hvil.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-28",
+          "dayOfWeek": "Torsdag",
+          "workouts": [
+            {
+              "id": "w8-thu-fartlek",
+              "sport": "run",
+              "type": "fartlek",
+              "name": "Fartlek — hold skarpheten",
+              "description": "Gruppefallback: 9km med 6×1min surges ved terskelfarr, lang lett restitusjon. Hold beina skarpe uten å belaste.\nGruppetrening: følg gruppens økt, hold igjen 10%.",
+              "durationMinutes": 52,
+              "distanceKm": 9,
+              "primaryZone": "Sone 2-4",
+              "groupAlternative": "Følg gruppens økt, men slapp litt av — restitusjonsuke.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-29",
+          "dayOfWeek": "Fredag",
+          "workouts": [
+            {
+              "id": "w8-fri-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Hvile",
+              "description": "Hvil. Toppuken starter mandag.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-30",
+          "dayOfWeek": "Lørdag",
+          "workouts": [
+            {
+              "id": "w8-sat-easy",
+              "sport": "run",
+              "type": "trail_easy",
+              "name": "Lett trailtur",
+              "description": "11km lett trail, HR 143-157. Hilderunden eller Nygård. Ingen pressing.",
+              "durationMinutes": 68,
+              "distanceKm": 11,
+              "elevation": 210,
+              "primaryZone": "Sone 2",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-05-31",
+          "dayOfWeek": "Søndag",
+          "workouts": [
+            {
+              "id": "w8-sun-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Hvile",
+              "description": "Full hvile. Toppuken starter.",
+              "completed": false
+            }
+          ]
+        }
+      ],
+      "summary": {
+        "totalHours": 3.0,
+        "bySport": {
+          "run": {
+            "sessions": 3,
+            "hours": 3.0,
+            "km": 25,
+            "elev": 210
+          }
+        }
+      }
+    },
+    {
+      "weekNumber": 9,
+      "phase": "Toppuke",
+      "startDate": "2026-06-01",
+      "endDate": "2026-06-07",
+      "focus": "Toppuke. Siste store stimulus. 20km langtur søndag er planens viktigste økt.",
+      "targetHours": 5.8,
+      "isRecoveryWeek": false,
+      "days": [
+        {
+          "date": "2026-06-01",
+          "dayOfWeek": "Mandag",
+          "workouts": [
+            {
+              "id": "w9-mon-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Hvile",
+              "description": "Hvil.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-06-02",
+          "dayOfWeek": "Tirsdag",
+          "workouts": [
+            {
+              "id": "w9-tue-easy",
+              "sport": "run",
+              "type": "easy",
+              "name": "Lett Z2-løp",
+              "description": "7km lett, HR <157.",
+              "durationMinutes": 44,
+              "distanceKm": 7,
+              "primaryZone": "Sone 2",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-06-03",
+          "dayOfWeek": "Onsdag",
+          "workouts": [
+            {
+              "id": "w9-wed-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Hvile",
+              "description": "Hvil.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-06-04",
+          "dayOfWeek": "Torsdag",
+          "workouts": [
+            {
+              "id": "w9-thu-threshold",
+              "sport": "run",
+              "type": "threshold",
+              "name": "Siste terskeløkt (flat grus)",
+              "description": "Gruppefallback: 3×8min terskel (HR 175-179), 3min jogg mellom. 2km oppvarming + 2km nedjogg. Din siste harde flatøkt før nedtrappingen.\nGruppetrening: følg dagens økt fullt ut.",
+              "durationMinutes": 62,
+              "distanceKm": 12,
+              "primaryZone": "Sone 5a",
+              "groupAlternative": "Følg gruppens økt fullt ut — dette er din siste sjanse før taper.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-06-05",
+          "dayOfWeek": "Fredag",
+          "workouts": [
+            {
+              "id": "w9-fri-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Hvile",
+              "description": "Hvil. Stor dag søndag.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-06-06",
+          "dayOfWeek": "Lørdag",
+          "workouts": [
+            {
+              "id": "w9-sat-medium",
+              "sport": "run",
+              "type": "trail_medium",
+              "name": "Moderat trailtur",
+              "description": "12km trail, HR 150-165. Ikke noe voldsomt — spar kreftene til søndagens topptur. Nygård-Sæteren eller Hilderunden.",
+              "durationMinutes": 78,
+              "distanceKm": 12,
+              "elevation": 240,
+              "primaryZone": "Sone 2-3",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-06-07",
+          "dayOfWeek": "Søndag",
+          "workouts": [
+            {
+              "id": "w9-sun-peak",
+              "sport": "run",
+              "type": "race_simulation",
+              "name": "🏔️ TOPPTUR — 20km +700m",
+              "description": "Planens største og viktigste økt. Kjør til Norefjell (kursrekognosering!) eller Krokskogen/Nordmarka. 20km med 650-750m stigning. Klatringer i race-innsats (HR 165-174), kontrollert på nedstigning og flatt. Du dekker race-distansen i dag — enorm selvtillitsboost. Gel/bar ved 40, 80 og 120min.",
+              "durationMinutes": 150,
+              "distanceKm": 20,
+              "elevation": 700,
+              "primaryZone": "Sone 3-4 opp, Sone 2 ellers",
+              "completed": false
+            }
+          ]
+        }
+      ],
+      "summary": {
+        "totalHours": 5.8,
+        "bySport": {
+          "run": {
+            "sessions": 4,
+            "hours": 5.8,
+            "km": 51,
+            "elev": 940
+          }
+        }
+      }
+    },
+    {
+      "weekNumber": 10,
+      "phase": "Nedtrapping",
+      "startDate": "2026-06-08",
+      "endDate": "2026-06-14",
+      "focus": "40% volumreduksjon. Behold intensitet. Beina skal begynne å kjennes friske.",
+      "targetHours": 3.3,
+      "isRecoveryWeek": true,
+      "days": [
+        {
+          "date": "2026-06-08",
+          "dayOfWeek": "Mandag",
+          "workouts": [
+            {
+              "id": "w10-mon-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Hvile",
+              "description": "Full hvile etter toppuken. Du er nå i nedtrapping — stol på formen. Ikke legg til ekstra løp.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-06-09",
+          "dayOfWeek": "Tirsdag",
+          "workouts": [
+            {
+              "id": "w10-tue-easy",
+              "sport": "run",
+              "type": "easy",
+              "name": "Lett løp med strides",
+              "description": "7km lett Z2, med 4×20sek strides (race-tempo, 90sek gange mellom) på slutten. Holder beina skarpe uten belastning.",
+              "durationMinutes": 44,
+              "distanceKm": 7,
+              "primaryZone": "Sone 2 + strides",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-06-10",
+          "dayOfWeek": "Onsdag",
+          "workouts": [
+            {
+              "id": "w10-wed-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Hvile",
+              "description": "Hvil.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-06-11",
+          "dayOfWeek": "Torsdag",
+          "workouts": [
+            {
+              "id": "w10-thu-tune",
+              "sport": "run",
+              "type": "tempo",
+              "name": "Kort terskel-innstilling (flat grus)",
+              "description": "Gruppefallback: 2×6min terskel (HR 175-179), 3min jogg mellom. Kort, skarp, ferdig. 2km oppvarming + 2km nedjogg. Minner kroppen på race-innsats.\nGruppetrening: følg dagens økt, men hold igjen på siste drag.",
+              "durationMinutes": 48,
+              "distanceKm": 8,
+              "primaryZone": "Sone 5a",
+              "groupAlternative": "Følg gruppens økt. Hold 90% av normal innsats.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-06-12",
+          "dayOfWeek": "Fredag",
+          "workouts": [
+            {
+              "id": "w10-fri-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Hvile",
+              "description": "Hvil.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-06-13",
+          "dayOfWeek": "Lørdag",
+          "workouts": [
+            {
+              "id": "w10-sat-trail",
+              "sport": "run",
+              "type": "trail_easy",
+              "name": "Lett trail med bakkesurges",
+              "description": "10km lett trail. Inkluder 3×2min bakke-surges i race-innsats (HR 165-174) for å vedlikeholde nevromuskulære klatremønstre. Alt annet Z2.",
+              "durationMinutes": 62,
+              "distanceKm": 10,
+              "elevation": 190,
+              "primaryZone": "Sone 2 med 3 surges",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-06-14",
+          "dayOfWeek": "Søndag",
+          "workouts": [
+            {
+              "id": "w10-sun-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Hvile",
+              "description": "Hvil. 6 dager til løpsdagen. Selvtilliten bør bygge seg.",
+              "completed": false
+            }
+          ]
+        }
+      ],
+      "summary": {
+        "totalHours": 3.3,
+        "bySport": {
+          "run": {
+            "sessions": 3,
+            "hours": 3.3,
+            "km": 25,
+            "elev": 190
+          }
+        }
+      }
+    },
+    {
+      "weekNumber": 11,
+      "phase": "Nedtrapping",
+      "startDate": "2026-06-15",
+      "endDate": "2026-06-20",
+      "focus": "Løpsuke. Kun lette risteturer. Løp søndag 20. juni.",
+      "targetHours": 1.5,
+      "isRecoveryWeek": true,
+      "days": [
+        {
+          "date": "2026-06-15",
+          "dayOfWeek": "Mandag",
+          "workouts": [
+            {
+              "id": "w11-mon-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Hvile",
+              "description": "Hvil. Du er i form. Høyet er i låven. Ikke legg til ekstra trening.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-06-16",
+          "dayOfWeek": "Tirsdag",
+          "workouts": [
+            {
+              "id": "w11-tue-shakeout",
+              "sport": "run",
+              "type": "easy",
+              "name": "Lett ristetur + strides",
+              "description": "20-25min lett løp + 4×15sek strides i race-tempo, gange mellom. Totalt ~5km. Kun for å holde beina løse.",
+              "durationMinutes": 28,
+              "distanceKm": 5,
+              "primaryZone": "Sone 1-2 + strides",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-06-17",
+          "dayOfWeek": "Onsdag",
+          "workouts": [
+            {
+              "id": "w11-wed-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Hvile",
+              "description": "Hvil. Beina bør kjennes friske og kvikke.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-06-18",
+          "dayOfWeek": "Torsdag",
+          "workouts": [
+            {
+              "id": "w11-thu-shakeout",
+              "sport": "run",
+              "type": "easy",
+              "name": "Lett ristetur",
+              "description": "20min veldig lett løp, 3-4km. Avslappet, ingen press. Bare for å holde seg løs. INGEN gruppe-intervaller denne uka.",
+              "durationMinutes": 22,
+              "distanceKm": 4,
+              "primaryZone": "Sone 1",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-06-19",
+          "dayOfWeek": "Fredag",
+          "workouts": [
+            {
+              "id": "w11-fri-rest",
+              "sport": "rest",
+              "type": "rest",
+              "name": "Hvile / Reise",
+              "description": "Full hvile. Reis til Norefjell. Legg frem utstyr. Spis godt (karborik middag, ingenting nytt). Legg deg tidlig. IKKE bruk dagen på å stå rundt.",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "date": "2026-06-20",
+          "dayOfWeek": "Lørdag",
+          "workouts": [
+            {
+              "id": "w11-sat-race",
+              "sport": "run",
+              "type": "race",
+              "name": "🏆 LØPSDAG — Hoka Norefjell Trail 22K",
+              "description": "LØPSDAG! 22,45km, 867m stigning. Start 789m, topp 1459m ved km 12.3, lang nedstigning tilbake. Mål 2:35-2:45. Se Race Strategy-fanen for full plan.",
+              "durationMinutes": 160,
+              "distanceKm": 22,
+              "elevation": 867,
+              "primaryZone": "Sone 3-4",
+              "completed": false
+            }
+          ]
+        }
+      ],
+      "summary": {
+        "totalHours": 1.5,
+        "bySport": {
+          "run": {
+            "sessions": 3,
+            "hours": 1.5,
+            "km": 13,
+            "elev": 0
+          }
+        }
+      }
+    }
+  ],
+  "coachingNotes": {
+    "keyIssuesFound": [
+      {
+        "issue": "Løper for hardt på lette dager",
+        "detail": "Din gjennomsnittlige hjertefrekvens på ALLE løp de siste 2 år er 158,9 bpm — dette er sone 3 (tempo). De fleste av dine «lette» løp er faktisk moderate innsatser. Dette er det klassiske grå-sone-problemet: du går for hardt til å gi ordentlig aerob restitusjon, men for lett til å gi sterkest mulig anaerobt stimulus.",
+        "fix": "Når planen sier Lett: mål HR 143–157 bpm. Senk farten til du holder deg under 157. Det vil føles pinlig sakte — det er riktig og normalt. Etter 4–6 uker løper du raskere ved samme HR."
+      },
+      {
+        "issue": "Utilstrekkelig bakketrening for dette løpet",
+        "detail": "Norefjell 22K har 897m stigning — nesten utelukkende i første halvdel (12km). Ditt treningsområde i Eiksmarka er relativt flatt, med et snitt på kun +320m per uke de siste 12 ukene. Uten spesifikk klatretilpasning vil musklene (setemuskulatur, hoftefleksorer, legger) og det kardiovaskulære systemet mangle nødvendig toleranse.",
+        "fix": "Kjør til Kolsåstoppen, Vettakollen, Lysakerelva-dalen eller Krokskogen for dedikerte bakke-sessions. Øv på power-hiking (rask og effektiv gange) på gradienter over ~25% — det er raskere enn treg jogging på bratte partier."
+      },
+      {
+        "issue": "Volumujevnhet — januar/februar 2026 var for sparsomt",
+        "detail": "I januar og februar 2026 trente du svært lite — ofte bare 1–2 løp per uke, noen ganger ingenting i hele uker. Det gir et 12-ukers snitt på kun 19,2 km/uke, til tross for at du de siste 4 ukene er oppe i 32,6 km/uke. Konsistens er den mest undervurderte faktoren i utholdenhetstrening.",
+        "fix": "Denne planen prioriterer 4–5 løp per uke, hver uke. Mangler du én økt av og til, er det greit — mangler du en hel uke, er det kostbart. Barnehage- og skolekjørings-rundene er perfekte faste lett-løp."
+      },
+      {
+        "issue": "Excentrisk quadricepsstyrke for 900m nedstigning",
+        "detail": "Nedstigningen (900m over ~7km) er ekstremt belastende for quadriceps-muskulaturen. Uten spesifikk excentrisk styrke vil quadsen begynne å gi seg rundt km 16–18, og det kan bety gange-tempo de siste 4–6km. Ingen synlig styrketrening i Strava-loggen.",
+        "fix": "Inkluder step-downs (3×15 hvert ben) og Bulgarian split squats (3×12) 1–2 ganger per uke. Løping nedoverbakke i trening bygger også dette — det er en av grunnene til at planen inkluderer back-to-back helgedager og race-simulering."
+      }
+    ],
+    "powerHikingNote": "For partier med gradient over ~20–25% på Norefjell-klatringen er rask og effektiv gange (power-hiking) faktisk raskere enn langsom jogging for de fleste løpere — og sparer quadriceps til nedstigningen. Teknikk: kropp framover, hender på lårene for framdrift, aggressiv armdrive, korte raske steg."
+  },
+  "raceStrategy": {
+    "event": {
+      "name": "Hoka Norefjell Trail 22K",
+      "date": "2026-06-20",
+      "type": "fjell-trail",
+      "distances": {
+        "run_km": 22.45,
+        "elevation_gain_m": 867,
+        "elevation_loss_m": 868
+      },
+      "profile": "Start 789m → gradvis stigning → bratt klatring km 5-12 → toppplatå km 10.5-16.4 → slak nedstigning km 12-19 → bratt finale km 19-22.4",
+      "gpxAnalysis": {
+        "totalKm": 22.45,
+        "startEle_m": 789,
+        "peakEle_m": 1459,
+        "peakAtKm": 12.3,
+        "summitZone": "km 10.5–16.4 (5.9km over 1380m høyde)",
+        "steepestUphillWindow": "+15.6% ved km 9.3 (500m-rute)",
+        "steepestDownhillWindow": "-24.1% ved km 21.1 (500m-rute)"
+      }
+    },
+    "targetTime": {
+      "optimistic": "2:25–2:30",
+      "realistic": "2:35–2:45",
+      "conservative": "2:50–2:55",
+      "basis": "Revidert fra opprinnelig estimat (3:00–3:10) basert på grundigere analyse av Lommedalen Rundt. Lommedalen (18,6km +672m, 2:09) ble løpt i svært våte forhold — tørr-ekvivalenten er ~1:59. Segmentvis estimat for Norefjell (tørre forhold, etter 13 ukers spesifikktrening): inngang km 0-5 ~29min, hoveddelen av klatringen km 5-12 ~1:13, toppplatå km 12-16 ~28min, nedstigning km 16-22.4 ~31min. Total ca. 2:41, forbedret til 2:35–2:45 med fullt treningsgrunnlag."
+    },
+    "courseSegments": [
+      {
+        "segment": "km 0–5",
+        "navn": "Inngang — gradvis stigning med felle",
+        "ele_start": 789,
+        "ele_end": 915,
+        "gain_m": 86,
+        "loss_m": 61,
+        "avgGradient": "+2.5%",
+        "keyFact": "Inneholder et FALL på ~50m rundt km 4-5 (gradient -4.8%). Mange løpere brøyter gjennom denne dalen og betaler prisen når den bratte klatringen starter igjen ved km 5.",
+        "strategy": "Start konservativt (HR <160). La alle passere deg i starten — de som går ut for hardt betaler dyrt. Løp det meste, men ikke press. MERK: dalen ved km 4-5 er en felle — ikke bruk den til å hente inn tid.",
+        "target_hr": "<160 bpm",
+        "effort": "Lett-moderat"
+      },
+      {
+        "segment": "km 5–10",
+        "navn": "Hoveddelen av klatringen — bratt og hardt",
+        "ele_start": 915,
+        "ele_end": 1352,
+        "gain_m": 440,
+        "loss_m": 10,
+        "avgGradient": "+8.8%",
+        "keyFact": "Gjennomsnittsgradient +8.8% over 5km. De bratteste 500m-vinduene på hele ruta er her: km 5.6-5.7 (+13.6%), km 7.7-7.8 (+13.2%), km 9.2-9.3 (+15.6%). Dette er power-hiking-territorium.",
+        "strategy": "Løp alt under ~10% gradient. Når du treffer de bratte veggene (>10-12%), bytt umiddelbart til aggressiv power-hiking. Det er raskere OG sparer beina til nedstigningen. HR 165-174.",
+        "target_hr": "165–174 bpm",
+        "effort": "Race-innsats — kontrollert hardt",
+        "powerHikeZones": [
+          "km 5.6-5.7 (+13.6%)",
+          "km 7.7-7.8 (+13.2%)",
+          "km 9.2-9.3 (+15.6%)"
+        ]
+      },
+      {
+        "segment": "km 10–12",
+        "navn": "Tilnærming til topp — avtar noe",
+        "ele_start": 1352,
+        "ele_end": 1415,
+        "gain_m": 79,
+        "loss_m": 18,
+        "avgGradient": "+3.2%",
+        "keyFact": "Gradienten avtar til +5.5% (km 10-11) og +0.9% (km 11-12). Du nærmer deg toppen.",
+        "strategy": "Gradienten avtar — du kan begynne å løpe mer igjen. Men ikke eksplosiv akselerasjon — spill kortene kloke. Dette er en lang runde.",
+        "target_hr": "162–172 bpm",
+        "effort": "Moderat-hardt"
+      },
+      {
+        "segment": "km 12–16",
+        "navn": "Toppplatå — teknisk og krevende",
+        "ele_start": 1459,
+        "ele_end": 1372,
+        "gain_m": 117,
+        "loss_m": 204,
+        "avgGradient": "Variabel: -1.5% → -3.5% → -1.7% → +2.3%",
+        "keyFact": "VIKTIG: Toppplatået (km 10.5-16.4) er IKKE et enkelt fall. Det er 6km med teknisk terreng, undulerende profil, og inkluderer en overraskende STIGNING ved km 16 (+2.3%). Mange løpere forventer ren nedstigning her og blir mentalt slått ut av motbakken.",
+        "strategy": "Løp avslappet og teknisk på dette partiet. Ikke la deg overraske av motbakken ved km 16 — den kommer. Drikk og ta gel i starten av dette segmentet (km 13-14). Behold jevn HR.",
+        "target_hr": "155–168 bpm",
+        "effort": "Moderat — ta igjen pust"
+      },
+      {
+        "segment": "km 16–19",
+        "navn": "Overgang — slak nedstigning begynner",
+        "ele_start": 1372,
+        "ele_end": 1260,
+        "gain_m": 28,
+        "loss_m": 140,
+        "avgGradient": "-3.7%",
+        "keyFact": "Gradienten er fortsatt relativt slak (-3.8% til -5%). Løpbar og rask, men ikke ekstrem. Spar quadriceps til det som kommer.",
+        "strategy": "Øk farten kontrollert. Korte lette steg. HR vil falle naturlig. Spar quadriceps — de VIRKELIG bratte partiene er ikke her ennå.",
+        "target_hr": "150–162 bpm",
+        "effort": "Kontrollert rask"
+      },
+      {
+        "segment": "km 19–22.4",
+        "navn": "⚡ FINALEFALL — Quadricepsdreperen",
+        "ele_start": 1260,
+        "ele_end": 789,
+        "gain_m": 13,
+        "loss_m": 484,
+        "avgGradient": "-13.1% snitt, opp til -24% i de bratteste 500m",
+        "keyFact": "Dette er løpets avgjørende segment. km 20-21 er -12.4%, km 21-22 er -20.9%, og de bratteste 500m-vinduene er -23 til -24% ved km 21. Uten god eccentrisk quadstyrke og teknikk vil du kollapse her.",
+        "strategy": "Ikke sprint dette — det er selvmord for quadriceps. Løp RASKT men KONTROLLERT. Teknikk: framoverlent overkropp, korte raske steg, land på midtfot, aktive armer. Jo brattere det er, jo kortere steglengde. Brems ALDRI med quads — bruk hofter og kjernemuskulatur til å styre. Siste gel ved km 18-19.",
+        "target_hr": "155–168 bpm (vil kjennes lett tross høy fart)",
+        "effort": "Teknisk rask nedstigning",
+        "powerHikeNote": "Ekstreme partier over -20% kan power-hikes hvis quadriceps er utslitte — det er bedre enn å falle"
+      }
+    ],
+    "pacing": {
+      "km0til5": {
+        "description": "Start konservativt. HR-tak 160. Pas på dalen ved km 4-5 — det er en felle, ikke en mulighet.",
+        "target_hr": "<160 bpm",
+        "effort": "Lett-moderat"
+      },
+      "km5til10": {
+        "description": "Hoveddelen av klatringen. Gjennomsnitt +8.8%. Power-hike alt over ~10% gradient. HR 165-174.",
+        "target_hr": "165–174 bpm",
+        "effort": "Race-innsats"
+      },
+      "km10til12": {
+        "description": "Gradienten avtar. Begynn å løpe mer. HR 162-172.",
+        "target_hr": "162–172 bpm",
+        "effort": "Moderat-hardt"
+      },
+      "km12til16": {
+        "description": "Teknisk toppplatå. Slak variabel profil. Overraskende motbakke ved km 16. Drikk og spis her.",
+        "target_hr": "155–168 bpm",
+        "effort": "Moderat"
+      },
+      "km16til19": {
+        "description": "Nedstigning begynner for alvor. Slak (-4 til -5%). Kontrollert rask. Spar quadriceps.",
+        "target_hr": "150–162 bpm",
+        "effort": "Kontrollert rask"
+      },
+      "km19til22": {
+        "description": "Bratt finale (-13% snitt, opp til -24%). Teknisk nedstigning med korte raske steg. Siste gel ved km 18-19.",
+        "target_hr": "155–168 bpm",
+        "effort": "Teknisk rask"
+      }
+    },
+    "nutrition": {
+      "preRace": "Kvelden før: pasta/ris + protein. Drikk 1,5L vann. Legg deg tidlig. Løpsmorgen (3t før): havregrøt eller brød + banan, 500ml vann. 30 min før start: 1 gel + 200ml vann.",
+      "during": {
+        "carbsPerHour": 50,
+        "plan": [
+          {
+            "km": 7,
+            "note": "Gel #1 — midt i hoveddelen av klatringen (km 5-10). Kritisk tidspunkt."
+          },
+          {
+            "km": 13,
+            "note": "Gel #2 — start av toppplatået. Drikk her, lenge til neste stasjon."
+          },
+          {
+            "km": 18,
+            "note": "Gel #3 — RETT FØR det bratte finalefallets verste parti. Siste drivstoff."
+          }
+        ],
+        "products": "Bruk geler du har trent med — ALDRI prøv noe nytt på løpsdagen."
+      },
+      "hydration": "Drikk ved ALLE drikkestasjoner. På 1400m og i vedvarende klatring dehydrerer du raskere enn på flate løp. Minimum 500ml drikkeflaske.",
+      "keyWarning": "Det er ingen rask nedtur fra km 12 — toppplatået varer til km 16.4. Planlegg drikke og gel i god tid."
+    },
+    "gearChecklist": [
+      "Terrengsko med godt grep — den bratte finalen (km 21-22, -24%) krever grip",
+      "Staver (valgfritt) — nyttige på klatringen km 5-12, kan bæres på nedstigningen",
+      "Lett pakbar jakke — fjellet ved 1400m kan ha vind og temperaturskift",
+      "Lue/buff — soleksponering på det lange toppplatået (6km over 1380m)",
+      "Minimum 2-3 geler + 1 energibar som backup",
+      "Telefon (fulladet) — obligatorisk i alpint terreng"
+    ],
+    "keyMentalPoints": [
+      "Dalen ved km 4-5 er en felle — ikke bruk den til å hente inn tid",
+      "Toppplatået er IKKE bare nedover — det er 6km med teknisk terreng og en overraskende motbakke ved km 16",
+      "Km 19-22 er løpets farligste segment for quadriceps — ikke sprint det",
+      "Alle som starter for fort på km 0-5 betaler dobbelt på km 19-22"
+    ],
+    "taper": {
+      "startDate": "2026-06-08",
+      "volumeReduction": "40–50%",
+      "notes": "Behold 2 kvalitetsøkter i uke 10, deretter kun lett i løpsuka. Du vil kjenne deg tung rundt 10.–13. juni — helt normalt. Stol på prosessen."
+    }
+  }
+}

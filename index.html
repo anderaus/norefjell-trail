@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Norefjell Trail 22K — Treningsplan 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --stone: #1c1a17;
+  --stone-mid: #2e2b26;
+  --stone-light: #453f35;
+  --snow: #f4f0e8;
+  --snow-warm: #e8e2d5;
+  --orange: #d95f2b;
+  --orange-light: #f07848;
+  --teal: #2a8a7f;
+  --teal-light: #3db0a2;
+  --gold: #c9a84c;
+  --red: #b83030;
+
+  --z1: #6b8c6b; --z2: #4a8fa3; --z3: #c9a84c; --z4: #d97730; --z5: #c03a3a;
+  --build: #3d6e4e; --spec: #2a5c8a; --peak: #8a2a2a; --recovery: #5a5040; --taper: #4a3a6a;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--stone);
+  color: var(--snow);
+  min-height: 100vh;
+}
+
+/* Header */
+.hero {
+  background: linear-gradient(160deg, #1c1a17 0%, #2a2420 40%, #1a2820 100%);
+  border-bottom: 1px solid var(--stone-light);
+  padding: 48px 40px 40px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -80px;
+  width: 400px; height: 400px;
+  background: radial-gradient(ellipse, rgba(41,138,127,0.15) 0%, transparent 65%);
+  pointer-events: none;
+}
+.hero-badge {
+  display: inline-block;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--teal-light);
+  border: 1px solid var(--teal);
+  padding: 4px 10px;
+  margin-bottom: 16px;
+}
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 900;
+  line-height: 1.05;
+  color: var(--snow);
+  letter-spacing: -0.5px;
+}
+.hero-title em {
+  color: var(--orange);
+  font-style: normal;
+}
+.hero-subtitle {
+  margin-top: 10px;
+  color: var(--snow-warm);
+  font-weight: 300;
+  font-size: 15px;
+  opacity: 0.8;
+}
+.hero-meta {
+  display: flex;
+  gap: 32px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+.meta-item { display: flex; flex-direction: column; gap: 3px; }
+.meta-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.7;
+}
+.meta-value {
+  font-family: 'DM Mono', monospace;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--snow);
+}
+
+/* Nav */
+.main-nav {
+  background: var(--stone-mid);
+  border-bottom: 1px solid var(--stone-light);
+  padding: 0 40px;
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.main-nav::-webkit-scrollbar { display: none; }
+.nav-btn {
+  background: none;
+  border: none;
+  color: var(--snow-warm);
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 14px 20px;
+  cursor: pointer;
+  opacity: 0.6;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+.nav-btn:hover { opacity: 1; }
+.nav-btn.active { opacity: 1; border-bottom-color: var(--orange); color: var(--snow); }
+
+/* Views */
+.view { display: none; padding: 32px 40px; }
+.view.active { display: block; }
+
+/* Section headers */
+.section-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--teal-light);
+  margin-bottom: 8px;
+  opacity: 0.8;
+}
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--snow);
+  margin-bottom: 24px;
+}
+
+/* Assessment grid */
+.assess-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+@media (max-width: 700px) { .assess-grid { grid-template-columns: 1fr; } }
+.assess-card {
+  background: var(--stone-mid);
+  border: 1px solid var(--stone-light);
+  border-radius: 8px;
+  padding: 20px;
+}
+.assess-card-title {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.assess-card-title.strength { color: var(--teal-light); }
+.assess-card-title.limiter { color: var(--orange); }
+.assess-item {
+  padding: 8px 0;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  font-size: 13px;
+  line-height: 1.5;
+}
+.assess-item:first-of-type { border-top: none; }
+.assess-item strong { color: var(--snow); }
+.assess-item span { color: var(--snow-warm); opacity: 0.7; display: block; font-size: 12px; margin-top: 2px; }
+
+/* Zone bars */
+.zones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.zone-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--stone-mid);
+  border: 1px solid var(--stone-light);
+  border-radius: 6px;
+  padding: 10px 14px;
+}
+.zone-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.zone-info { flex: 1; }
+.zone-name { font-size: 12px; font-weight: 500; color: var(--snow); }
+.zone-detail { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--snow-warm); opacity: 0.7; margin-top: 1px; }
+
+/* Plan overview timeline */
+.phase-timeline {
+  display: flex;
+  gap: 0;
+  margin-bottom: 28px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--stone-light);
+}
+.phase-block {
+  flex: 1;
+  padding: 12px 16px;
+  text-align: center;
+  border-right: 1px solid rgba(255,255,255,0.08);
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.phase-block:last-child { border-right: none; }
+.phase-block:hover { opacity: 0.85; }
+.phase-block-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.8;
+  color: white;
+}
+.phase-block-weeks {
+  font-size: 11px;
+  margin-top: 2px;
+  opacity: 0.6;
+  color: white;
+}
+.phase-block.build-color { background: rgba(61,110,78,0.5); }
+.phase-block.recovery-color { background: rgba(90,80,64,0.5); }
+.phase-block.spec-color { background: rgba(42,92,138,0.5); }
+.phase-block.peak-color { background: rgba(138,42,42,0.5); }
+.phase-block.taper-color { background: rgba(74,58,106,0.5); }
+
+/* Week cards */
+.weeks-list { display: flex; flex-direction: column; gap: 16px; }
+
+.week-card {
+  background: var(--stone-mid);
+  border: 1px solid var(--stone-light);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.week-card.recovery-week { border-color: rgba(90,80,64,0.8); }
+.week-card.peak-week { border-color: rgba(138,42,42,0.8); }
+
+.week-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  cursor: pointer;
+  user-select: none;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.week-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--orange);
+  min-width: 36px;
+  line-height: 1;
+}
+.week-info { flex: 1; }
+.week-phase-tag {
+  display: inline-block;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: 3px;
+  margin-bottom: 4px;
+}
+.week-dates { font-size: 12px; color: var(--snow-warm); opacity: 0.7; margin-bottom: 3px; }
+.week-focus { font-size: 13px; color: var(--snow-warm); }
+.week-stats {
+  display: flex;
+  gap: 16px;
+  flex-shrink: 0;
+}
+.week-stat { text-align: right; }
+.week-stat-val { font-family: 'DM Mono', monospace; font-size: 15px; font-weight: 500; color: var(--snow); }
+.week-stat-lbl { font-size: 10px; color: var(--snow-warm); opacity: 0.5; }
+.week-chevron {
+  color: var(--snow-warm);
+  opacity: 0.4;
+  font-size: 16px;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+.week-card.open .week-chevron { transform: rotate(180deg); }
+
+.week-body { display: none; padding: 0 20px 20px; }
+.week-card.open .week-body { display: block; }
+
+/* Day rows */
+.day-list { display: flex; flex-direction: column; gap: 0; }
+.day-row {
+  display: flex;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  align-items: flex-start;
+}
+.day-row:last-child { border-bottom: none; }
+.day-name {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--snow-warm);
+  opacity: 0.5;
+  min-width: 56px;
+  padding-top: 2px;
+}
+.workout-block { flex: 1; }
+.workout-type-tag {
+  display: inline-block;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: 3px;
+  margin-bottom: 5px;
+}
+.workout-name { font-size: 14px; font-weight: 500; color: var(--snow); margin-bottom: 4px; }
+.workout-desc { font-size: 12px; color: var(--snow-warm); opacity: 0.75; line-height: 1.5; }
+.workout-meta {
+  display: flex;
+  gap: 12px;
+  margin-top: 6px;
+  flex-wrap: wrap;
+}
+.workout-meta-item {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--teal-light);
+  opacity: 0.8;
+}
+.workout-checkbox {
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid var(--stone-light);
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+  transition: all 0.2s;
+  background: transparent;
+}
+.workout-checkbox.done {
+  background: var(--teal);
+  border-color: var(--teal);
+  color: white;
+}
+.workout-checkbox.done::after { content: '✓'; font-size: 11px; }
+
+/* Workout type colors */
+.type-rest { background: rgba(90,80,64,0.3); color: var(--snow-warm); }
+.type-easy { background: rgba(74,143,163,0.25); color: var(--teal-light); }
+.type-hill { background: rgba(217,95,43,0.25); color: var(--orange-light); }
+.type-tempo, .type-threshold { background: rgba(176,48,48,0.25); color: #e07070; }
+.type-long { background: rgba(42,92,138,0.25); color: #7ab0e0; }
+.type-trail { background: rgba(61,110,78,0.25); color: #7aba8c; }
+.type-race { background: rgba(201,168,76,0.3); color: var(--gold); }
+.type-fartlek { background: rgba(138,98,42,0.25); color: #d4a060; }
+.type-race-sim { background: rgba(138,42,42,0.35); color: #e07070; }
+.type-climb { background: rgba(217,95,43,0.35); color: var(--orange-light); }
+
+/* Phase colors for tags */
+.phase-build { background: rgba(61,110,78,0.4); color: #7aba8c; }
+.phase-recovery { background: rgba(90,80,64,0.4); color: #b0a890; }
+.phase-specificity { background: rgba(42,92,138,0.4); color: #7ab0e0; }
+.phase-peak { background: rgba(138,42,42,0.4); color: #e08080; }
+.phase-taper { background: rgba(74,58,106,0.4); color: #b09ad0; }
+
+/* Coaching notes */
+.notes-list { display: flex; flex-direction: column; gap: 16px; }
+.note-card {
+  background: var(--stone-mid);
+  border-left: 3px solid var(--orange);
+  border-radius: 0 8px 8px 0;
+  padding: 16px 20px;
+}
+.note-issue {
+  font-weight: 500;
+  color: var(--orange-light);
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+.note-detail { font-size: 13px; color: var(--snow-warm); opacity: 0.8; line-height: 1.6; margin-bottom: 8px; }
+.note-fix {
+  font-size: 12px;
+  color: var(--teal-light);
+  line-height: 1.5;
+  padding: 8px 12px;
+  background: rgba(42,138,127,0.12);
+  border-radius: 4px;
+}
+.note-fix::before { content: "→ FIX: "; font-weight: 500; }
+
+/* Race strategy */
+.strategy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.strategy-card {
+  background: var(--stone-mid);
+  border: 1px solid var(--stone-light);
+  border-radius: 8px;
+  padding: 16px;
+}
+.strategy-card-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+.strategy-card-content { font-size: 13px; color: var(--snow-warm); line-height: 1.6; }
+
+/* Segment table */
+.seg-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 20px; }
+.seg-table th {
+  text-align: left;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.7;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--stone-light);
+}
+.seg-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  color: var(--snow-warm);
+  vertical-align: top;
+}
+.seg-table td:first-child { font-family: 'DM Mono', monospace; color: var(--snow); }
+.seg-table tr:last-child td { border-bottom: none; }
+
+/* Course Profile Visualization */
+.course-profile {
+  background: var(--stone-mid);
+  border: 1px solid var(--stone-light);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+.profile-svg { width: 100%; height: 120px; display: block; }
+
+/* Segment cards */
+.seg-card {
+  background: var(--stone-mid);
+  border: 1px solid var(--stone-light);
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+}
+.seg-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+.seg-km {
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  font-weight: 500;
+  min-width: 70px;
+  flex-shrink: 0;
+}
+.seg-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--snow);
+  flex: 1;
+}
+.seg-stats {
+  display: flex;
+  gap: 10px;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--snow-warm);
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+.seg-hr {
+  color: var(--teal-light);
+  opacity: 1;
+}
+.seg-gradient-bar {
+  height: 4px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 2px;
+  margin-bottom: 8px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.seg-gradient-fill {
+  height: 4px;
+  border-radius: 2px;
+  min-width: 4px;
+  opacity: 0.7;
+}
+.seg-gradient-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--snow-warm);
+  opacity: 0.5;
+  margin-left: 8px;
+}
+.seg-keyfact {
+  font-size: 12px;
+  color: var(--orange-light);
+  margin-bottom: 5px;
+  line-height: 1.5;
+}
+.seg-strat {
+  font-size: 12px;
+  color: var(--snow-warm);
+  opacity: 0.8;
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+.seg-hike {
+  font-size: 11px;
+  font-family: 'DM Mono', monospace;
+  color: var(--teal-light);
+  opacity: 0.7;
+  margin-top: 4px;
+}
+.mental-point {
+  background: rgba(42,138,127,0.12);
+  border-left: 2px solid var(--teal);
+  padding: 8px 12px;
+  margin-bottom: 6px;
+  border-radius: 0 4px 4px 0;
+  font-size: 13px;
+  color: var(--snow-warm);
+  line-height: 1.5;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; background: var(--stone); }
+::-webkit-scrollbar-thumb { background: var(--stone-light); border-radius: 3px; }
+
+/* Responsive */
+@media (max-width: 600px) {
+  .hero, .main-nav { padding-left: 20px; padding-right: 20px; }
+  .view { padding: 20px; }
+  .week-stats { display: none; }
+  .hero-meta { gap: 20px; }
+  .assess-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-badge">Treningsplan 2026</div>
+  <h1 class="hero-title">Hoka Norefjell Trail<br><em>22K</em></h1>
+  <p class="hero-subtitle">Lørdag 20. juni 2026 · 22.45km · 897m stigning · Start 789m, topp 1459m</p>
+  <div class="hero-meta">
+    <div class="meta-item">
+      <span class="meta-label">Oppstart</span>
+      <span class="meta-value">6. april</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Uker</span>
+      <span class="meta-value">11</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Mål</span>
+      <span class="meta-value">3:00–3:10</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">LTHR</span>
+      <span class="meta-value">176 bpm</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">MaxHR</span>
+      <span class="meta-value">190 bpm</span>
+    </div>
+  </div>
+</div>
+
+<nav class="main-nav">
+  <button class="nav-btn active" onclick="showView('plan', this)">Treningsplan</button>
+  <button class="nav-btn" onclick="showView('assessment', this)">Analyse</button>
+  <button class="nav-btn" onclick="showView('zones', this)">Soner</button>
+  <button class="nav-btn" onclick="showView('race', this)">Race Strategy</button>
+  <button class="nav-btn" onclick="showView('coaching', this)">Coaching-notater</button>
+</nav>
+
+<!-- PLAN VIEW -->
+<div id="view-plan" class="view active">
+  <div class="section-label">Ukeoversikt</div>
+  <div class="section-title">11-ukers treningsplan</div>
+
+  <div class="phase-timeline">
+    <div class="phase-block build-color" onclick="scrollToPhase('Oppbygging')">
+      <div class="phase-block-label">Oppbygging</div>
+      <div class="phase-block-weeks">Uke 1–3</div>
+    </div>
+    <div class="phase-block recovery-color">
+      <div class="phase-block-label">Recovery</div>
+      <div class="phase-block-weeks">Uke 4</div>
+    </div>
+    <div class="phase-block spec-color" onclick="scrollToPhase('Spesifisitet')">
+      <div class="phase-block-label">Spesifisitet</div>
+      <div class="phase-block-weeks">Uke 5–7</div>
+    </div>
+    <div class="phase-block recovery-color">
+      <div class="phase-block-label">Recovery</div>
+      <div class="phase-block-weeks">Uke 8</div>
+    </div>
+    <div class="phase-block peak-color" onclick="scrollToPhase('Toppuke')">
+      <div class="phase-block-label">Toppuke</div>
+      <div class="phase-block-weeks">Uke 9</div>
+    </div>
+    <div class="phase-block taper-color" onclick="scrollToPhase('Nedtrapping')">
+      <div class="phase-block-label">Nedtrapping</div>
+      <div class="phase-block-weeks">Uke 10–11</div>
+    </div>
+  </div>
+
+  <div class="weeks-list" id="weeks-container">
+  <!-- Weeks injected by JS -->
+  </div>
+</div>
+
+<!-- ASSESSMENT VIEW -->
+<div id="view-assessment" class="view">
+  <div class="section-label">Strava-analyse (274 aktiviteter)</div>
+  <div class="section-title">Løperprofil</div>
+
+  <div class="assess-grid">
+    <div class="assess-card">
+      <div class="assess-card-title strength">✦ Styrker</div>
+      <div class="assess-item"><strong>Aerob motor</strong><span>5km på 22:08 → terskelfarr ~4:40/km. Solid aerob base over 2 år, totalt 2066km, 34836m stigning.</span></div>
+      <div class="assess-item"><strong>Løypeerfaring</strong><span>Mange trail-løp opp til 19km. Lommedalen Rundt, Ivar Formos, Oslo Nightrun — alle gjennomført med god innsats.</span></div>
+      <div class="assess-item"><strong>Konsistens nå</strong><span>Siste 4 uker: 32,6 km/uke og +544m/uke — betydelig bedre enn 12-ukers snitt på 19 km/uke.</span></div>
+      <div class="assess-item"><strong>Race-form</strong><span>Brunkollen 21. mars 2026: 19,3km +358m på 1:51 ved HR 158 — veldig god form.</span></div>
+    </div>
+    <div class="assess-card">
+      <div class="assess-card-title limiter">⚠ Begrensere</div>
+      <div class="assess-item"><strong>Grå-sone-trening</strong><span>Snitt-HR på ALLE løp de siste 2 år: 158,9 bpm — midt i sone 3 (tempo). For få ekte lette løp.</span></div>
+      <div class="assess-item"><strong>Mangler bakketrening</strong><span>Eiksmarka er relativt flatt. Norefjell krever 897m stigning. Mangler spesifikk klatretilpasning.</span></div>
+      <div class="assess-item"><strong>Volumujevnhet</strong><span>Jan–feb 2026 var svært sparsomt (1–2 løp/uke). Konsistens er avgjørende.</span></div>
+      <div class="assess-item"><strong>Excentrisk styrke</strong><span>900m nedstigning belaster quadriceps enormt. Ingen synlig styrketrening i Strava-loggen.</span></div>
+    </div>
+  </div>
+
+  <div class="section-label" style="margin-top: 8px;">Nøkkelresultater</div>
+  <table class="seg-table">
+    <tr><th>Løp</th><th>Distanse</th><th>Stigning</th><th>Tid</th><th>Tempo</th><th>Snitt HR</th></tr>
+    <tr><td>5km Oslo Løpsfestival</td><td>5.0km</td><td>+11m</td><td>22:08</td><td>4:25/km</td><td>175 bpm</td></tr>
+    <tr><td>Sørkedalsløpet 2025</td><td>10.8km</td><td>+311m</td><td>63:44</td><td>5:54/km</td><td>173 bpm</td></tr>
+    <tr><td>Oslo Nightrun nov 2025</td><td>9.7km</td><td>+186m</td><td>63:06</td><td>6:31/km</td><td>173 bpm</td></tr>
+    <tr><td>Ivar Formos Minneløp</td><td>16.1km</td><td>+442m</td><td>1:50:37</td><td>6:53/km</td><td>172 bpm</td></tr>
+    <tr><td>Lommedalen Rundt</td><td>18.6km</td><td>+672m</td><td>2:09:21</td><td>7:01/km</td><td>167 bpm</td></tr>
+    <tr><td>Brunkollen (treningstur)</td><td>19.3km</td><td>+358m</td><td>1:51:47</td><td>5:48/km</td><td>158 bpm</td></tr>
+  </table>
+</div>
+
+<!-- ZONES VIEW -->
+<div id="view-zones" class="view">
+  <div class="section-label">Basert på LTHR 176 bpm</div>
+  <div class="section-title">Treningssoner</div>
+
+  <div class="zones-grid">
+    <div class="zone-row">
+      <div class="zone-dot" style="background:#6b8c6b"></div>
+      <div class="zone-info">
+        <div class="zone-name">Sone 1 — Restitusjon</div>
+        <div class="zone-detail">&lt;143 bpm · &lt;81% LTHR</div>
+      </div>
+    </div>
+    <div class="zone-row">
+      <div class="zone-dot" style="background:#4a8fa3"></div>
+      <div class="zone-info">
+        <div class="zone-name">Sone 2 — Aerob base ★</div>
+        <div class="zone-detail">143–157 bpm · 81–89% LTHR</div>
+      </div>
+    </div>
+    <div class="zone-row">
+      <div class="zone-dot" style="background:#c9a84c"></div>
+      <div class="zone-info">
+        <div class="zone-name">Sone 3 — Tempo</div>
+        <div class="zone-detail">158–164 bpm · 90–93% LTHR</div>
+      </div>
+    </div>
+    <div class="zone-row">
+      <div class="zone-dot" style="background:#d97730"></div>
+      <div class="zone-info">
+        <div class="zone-name">Sone 4 — Sub-terskel</div>
+        <div class="zone-detail">165–174 bpm · 94–99% LTHR</div>
+      </div>
+    </div>
+    <div class="zone-row">
+      <div class="zone-dot" style="background:#c03a3a"></div>
+      <div class="zone-info">
+        <div class="zone-name">Sone 5a — Terskel</div>
+        <div class="zone-detail">175–179 bpm · 100–102% LTHR</div>
+      </div>
+    </div>
+    <div class="zone-row">
+      <div class="zone-dot" style="background:#8a1a8a"></div>
+      <div class="zone-info">
+        <div class="zone-name">Sone 5b — VO2maks</div>
+        <div class="zone-detail">180–186 bpm · 103–106% LTHR</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-label">Fartsoner (flat bane, estimert)</div>
+  <table class="seg-table">
+    <tr><th>Sone</th><th>Navn</th><th>Fart (flat)</th><th>Bruk</th></tr>
+    <tr><td>Z1–2</td><td>Easy</td><td>5:30–6:10/km</td><td>Alle lette løp og oppvarming</td></tr>
+    <tr><td>Z2–3</td><td>Aerobic trail</td><td>6:00–7:30/km</td><td>Lett trail / lange turer</td></tr>
+    <tr><td>Z3</td><td>Tempo</td><td>4:50–5:05/km</td><td>Tempointervaller</td></tr>
+    <tr><td>Z4</td><td>Sub-threshold</td><td>4:45–4:55/km</td><td>Bakkeintervaller</td></tr>
+    <tr><td>Z5a</td><td>Terskel</td><td>4:35–4:50/km</td><td>Terskelintervaller</td></tr>
+    <tr><td>Race</td><td>Norefjell-tempo</td><td>7:30–8:30/km*</td><td>*Justert for stigning</td></tr>
+  </table>
+  <p style="font-size:12px; color:var(--snow-warm); opacity:0.6; margin-top:8px;">* Med 897m stigning: forvent 9–10 min/km oppover og 6–7 min/km nedover. Bruk hjertefrekvens, ikke fart, som styringsverktøy på traseen.</p>
+</div>
+
+<!-- RACE STRATEGY VIEW -->
+<div id="view-race" class="view">
+  <div class="section-label">Løpsdag — 20. juni 2026 · Basert på GPX-analyse</div>
+  <div class="section-title">Race-strategi: Norefjell Trail 22K</div>
+
+  <div class="course-profile">
+    <div class="section-label" style="margin-bottom:10px;">Høydeprofil — generert fra GPX-data (200 målepunkter)</div>
+    <svg viewBox="0 0 800 160" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;">
+  <defs>
+    <linearGradient id="profileFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a8a7f" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#2a8a7f" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="descentFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#b83030" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#b83030" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Summit zone highlight -->
+  <rect x="386.1" y="10" width="194.5" height="120" fill="rgba(201,168,76,0.08)" rx="0"/>
+
+  <!-- Steep descent zone highlight (km 19-22.4) -->
+  <rect x="666.3" y="10" width="113.7" height="120" fill="rgba(184,48,48,0.08)" rx="0"/>
+
+  <!-- Elevation fill -->
+  <path d="M 40.0,129.9 L 41.5,130.0 L 45.3,130.0 L 48.5,129.9 L 52.6,129.5 L 57.1,129.4 L 61.8,129.2 L 63.4,128.8 L 66.6,128.5 L 68.2,128.1 L 70.7,127.5 L 72.9,126.9 L 73.9,126.2 L 75.7,125.2 L 80.3,124.3 L 82.4,123.4 L 86.5,122.3 L 87.6,121.3 L 90.6,120.4 L 94.6,119.2 L 96.2,118.1 L 98.1,116.9 L 103.8,115.5 L 105.6,114.4 L 106.6,113.4 L 110.6,112.0 L 111.6,110.6 L 114.9,109.4 L 121.0,108.1 L 123.9,106.9 L 127.6,106.0 L 134.4,105.2 L 142.4,104.2 L 146.0,103.2 L 148.3,102.3 L 151.8,101.0 L 154.5,100.1 L 157.5,99.0 L 161.9,98.0 L 164.0,97.6 L 167.2,97.3 L 171.8,97.2 L 174.6,97.6 L 175.4,98.2 L 177.1,99.1 L 178.7,99.9 L 180.9,101.0 L 183.3,102.8 L 186.2,103.9 L 191.2,104.8 L 199.0,105.5 L 204.7,105.5 L 212.7,104.9 L 220.4,103.1 L 224.4,100.8 L 229.5,98.2 L 236.4,94.0 L 243.0,90.8 L 247.1,88.0 L 250.8,85.9 L 255.0,83.6 L 259.4,81.9 L 263.3,80.2 L 270.6,77.8 L 274.4,75.8 L 277.9,73.7 L 285.9,71.2 L 290.4,69.2 L 293.3,66.9 L 297.5,64.2 L 302.5,62.1 L 304.2,60.3 L 306.6,58.0 L 308.0,56.8 L 309.7,55.8 L 311.5,54.6 L 312.2,54.0 L 312.8,53.5 L 314.6,53.0 L 315.6,52.8 L 316.6,52.5 L 318.8,51.8 L 320.3,50.7 L 322.3,49.4 L 327.4,47.6 L 330.1,46.3 L 333.0,45.1 L 335.0,44.3 L 338.2,43.8 L 339.8,43.2 L 342.0,41.9 L 347.7,39.5 L 350.2,36.9 L 354.9,34.2 L 361.8,30.4 L 363.7,28.0 L 367.8,25.8 L 373.1,23.5 L 378.8,21.6 L 385.1,19.7 L 393.5,17.7 L 400.4,16.8 L 405.1,16.4 L 409.9,16.3 L 413.4,16.3 L 414.8,16.3 L 417.0,16.1 L 419.9,15.7 L 422.7,15.4 L 427.8,14.9 L 431.6,13.7 L 435.7,12.0 L 441.5,10.3 L 445.6,10.0 L 448.4,11.0 L 452.1,12.6 L 458.1,15.9 L 460.6,17.4 L 462.0,17.9 L 468.1,17.3 L 472.7,17.1 L 479.0,17.3 L 488.2,18.6 L 493.5,20.3 L 499.5,22.4 L 507.4,24.7 L 511.8,26.0 L 517.5,27.0 L 526.0,27.4 L 528.8,26.5 L 532.3,25.1 L 541.5,23.4 L 545.7,22.2 L 547.4,21.5 L 553.1,21.1 L 558.6,21.5 L 566.2,21.8 L 574.2,21.6 L 576.8,21.4 L 579.2,21.3 L 585.5,21.7 L 588.9,22.8 L 592.0,24.3 L 597.1,26.0 L 602.5,28.1 L 606.9,29.3 L 611.5,30.0 L 615.2,30.7 L 618.9,31.4 L 621.2,32.1 L 625.1,32.9 L 626.4,33.2 L 630.1,33.2 L 634.6,32.8 L 640.9,32.5 L 648.7,32.8 L 658.1,33.8 L 660.3,35.5 L 661.7,38.4 L 665.2,43.5 L 671.3,47.4 L 678.4,51.7 L 685.8,57.6 L 691.8,61.3 L 699.1,64.3 L 706.8,67.9 L 710.2,70.1 L 716.5,71.7 L 718.7,73.3 L 720.7,74.5 L 721.9,75.7 L 724.2,76.9 L 726.2,78.7 L 727.8,80.1 L 729.6,81.6 L 730.8,84.0 L 733.2,86.1 L 735.3,88.3 L 737.7,91.7 L 739.2,94.1 L 741.6,96.4 L 743.5,99.0 L 745.0,100.9 L 746.0,102.7 L 747.7,105.0 L 749.3,106.7 L 750.6,108.6 L 752.3,111.1 L 754.5,112.8 L 756.3,114.6 L 758.0,117.2 L 760.8,119.0 L 762.8,120.9 L 765.6,123.4 L 768.9,124.9 L 771.4,126.3 L 772.8,127.7 L 774.2,128.5 L 775.2,128.8 L 780.0,129.3 L 780.0,130 L 40.0,130 Z" fill="url(#profileFill)"/>
+
+  <!-- Elevation line -->
+  <path d="M 40.0,129.9 L 41.5,130.0 L 45.3,130.0 L 48.5,129.9 L 52.6,129.5 L 57.1,129.4 L 61.8,129.2 L 63.4,128.8 L 66.6,128.5 L 68.2,128.1 L 70.7,127.5 L 72.9,126.9 L 73.9,126.2 L 75.7,125.2 L 80.3,124.3 L 82.4,123.4 L 86.5,122.3 L 87.6,121.3 L 90.6,120.4 L 94.6,119.2 L 96.2,118.1 L 98.1,116.9 L 103.8,115.5 L 105.6,114.4 L 106.6,113.4 L 110.6,112.0 L 111.6,110.6 L 114.9,109.4 L 121.0,108.1 L 123.9,106.9 L 127.6,106.0 L 134.4,105.2 L 142.4,104.2 L 146.0,103.2 L 148.3,102.3 L 151.8,101.0 L 154.5,100.1 L 157.5,99.0 L 161.9,98.0 L 164.0,97.6 L 167.2,97.3 L 171.8,97.2 L 174.6,97.6 L 175.4,98.2 L 177.1,99.1 L 178.7,99.9 L 180.9,101.0 L 183.3,102.8 L 186.2,103.9 L 191.2,104.8 L 199.0,105.5 L 204.7,105.5 L 212.7,104.9 L 220.4,103.1 L 224.4,100.8 L 229.5,98.2 L 236.4,94.0 L 243.0,90.8 L 247.1,88.0 L 250.8,85.9 L 255.0,83.6 L 259.4,81.9 L 263.3,80.2 L 270.6,77.8 L 274.4,75.8 L 277.9,73.7 L 285.9,71.2 L 290.4,69.2 L 293.3,66.9 L 297.5,64.2 L 302.5,62.1 L 304.2,60.3 L 306.6,58.0 L 308.0,56.8 L 309.7,55.8 L 311.5,54.6 L 312.2,54.0 L 312.8,53.5 L 314.6,53.0 L 315.6,52.8 L 316.6,52.5 L 318.8,51.8 L 320.3,50.7 L 322.3,49.4 L 327.4,47.6 L 330.1,46.3 L 333.0,45.1 L 335.0,44.3 L 338.2,43.8 L 339.8,43.2 L 342.0,41.9 L 347.7,39.5 L 350.2,36.9 L 354.9,34.2 L 361.8,30.4 L 363.7,28.0 L 367.8,25.8 L 373.1,23.5 L 378.8,21.6 L 385.1,19.7 L 393.5,17.7 L 400.4,16.8 L 405.1,16.4 L 409.9,16.3 L 413.4,16.3 L 414.8,16.3 L 417.0,16.1 L 419.9,15.7 L 422.7,15.4 L 427.8,14.9 L 431.6,13.7 L 435.7,12.0 L 441.5,10.3 L 445.6,10.0 L 448.4,11.0 L 452.1,12.6 L 458.1,15.9 L 460.6,17.4 L 462.0,17.9 L 468.1,17.3 L 472.7,17.1 L 479.0,17.3 L 488.2,18.6 L 493.5,20.3 L 499.5,22.4 L 507.4,24.7 L 511.8,26.0 L 517.5,27.0 L 526.0,27.4 L 528.8,26.5 L 532.3,25.1 L 541.5,23.4 L 545.7,22.2 L 547.4,21.5 L 553.1,21.1 L 558.6,21.5 L 566.2,21.8 L 574.2,21.6 L 576.8,21.4 L 579.2,21.3 L 585.5,21.7 L 588.9,22.8 L 592.0,24.3 L 597.1,26.0 L 602.5,28.1 L 606.9,29.3 L 611.5,30.0 L 615.2,30.7 L 618.9,31.4 L 621.2,32.1 L 625.1,32.9 L 626.4,33.2 L 630.1,33.2 L 634.6,32.8 L 640.9,32.5 L 648.7,32.8 L 658.1,33.8 L 660.3,35.5 L 661.7,38.4 L 665.2,43.5 L 671.3,47.4 L 678.4,51.7 L 685.8,57.6 L 691.8,61.3 L 699.1,64.3 L 706.8,67.9 L 710.2,70.1 L 716.5,71.7 L 718.7,73.3 L 720.7,74.5 L 721.9,75.7 L 724.2,76.9 L 726.2,78.7 L 727.8,80.1 L 729.6,81.6 L 730.8,84.0 L 733.2,86.1 L 735.3,88.3 L 737.7,91.7 L 739.2,94.1 L 741.6,96.4 L 743.5,99.0 L 745.0,100.9 L 746.0,102.7 L 747.7,105.0 L 749.3,106.7 L 750.6,108.6 L 752.3,111.1 L 754.5,112.8 L 756.3,114.6 L 758.0,117.2 L 760.8,119.0 L 762.8,120.9 L 765.6,123.4 L 768.9,124.9 L 771.4,126.3 L 772.8,127.7 L 774.2,128.5 L 775.2,128.8 L 780.0,129.3" fill="none" stroke="#2a8a7f" stroke-width="1.8" stroke-linejoin="round"/>
+
+  <!-- Base line -->
+  <line x1="40" y1="130" x2="780" y2="130" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+
+  <!-- km tick marks and labels -->
+  <line x1="40.0" y1="130" x2="40.0" y2="134" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+  <text x="40.0" y="143" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(255,255,255,0.35)">0</text>
+  <line x1="105.9" y1="130" x2="105.9" y2="134" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+  <text x="105.9" y="143" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(255,255,255,0.35)">2</text>
+  <line x1="171.9" y1="130" x2="171.9" y2="134" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+  <text x="171.9" y="143" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(255,255,255,0.35)">4</text>
+  <line x1="237.8" y1="130" x2="237.8" y2="134" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+  <text x="237.8" y="143" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(255,255,255,0.35)">6</text>
+  <line x1="303.7" y1="130" x2="303.7" y2="134" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+  <text x="303.7" y="143" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(255,255,255,0.35)">8</text>
+  <line x1="369.7" y1="130" x2="369.7" y2="134" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+  <text x="369.7" y="143" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(255,255,255,0.35)">10</text>
+  <line x1="435.6" y1="130" x2="435.6" y2="134" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+  <text x="435.6" y="143" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(255,255,255,0.35)">12</text>
+  <line x1="501.5" y1="130" x2="501.5" y2="134" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+  <text x="501.5" y="143" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(255,255,255,0.35)">14</text>
+  <line x1="567.4" y1="130" x2="567.4" y2="134" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+  <text x="567.4" y="143" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(255,255,255,0.35)">16</text>
+  <line x1="633.4" y1="130" x2="633.4" y2="134" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+  <text x="633.4" y="143" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(255,255,255,0.35)">18</text>
+  <line x1="699.3" y1="130" x2="699.3" y2="134" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+  <text x="699.3" y="143" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(255,255,255,0.35)">20</text>
+  <line x1="765.2" y1="130" x2="765.2" y2="134" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+  <text x="765.2" y="143" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(255,255,255,0.35)">22</text>
+  <line x1="40" y1="109.5" x2="780" y2="109.5" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="3,4"/>
+  <text x="37" y="112.5" text-anchor="end" font-family="monospace" font-size="8" fill="rgba(255,255,255,0.3)">900</text>
+  <line x1="40" y1="90.9" x2="780" y2="90.9" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="3,4"/>
+  <text x="37" y="93.9" text-anchor="end" font-family="monospace" font-size="8" fill="rgba(255,255,255,0.3)">1000</text>
+  <line x1="40" y1="72.2" x2="780" y2="72.2" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="3,4"/>
+  <text x="37" y="75.2" text-anchor="end" font-family="monospace" font-size="8" fill="rgba(255,255,255,0.3)">1100</text>
+  <line x1="40" y1="53.5" x2="780" y2="53.5" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="3,4"/>
+  <text x="37" y="56.5" text-anchor="end" font-family="monospace" font-size="8" fill="rgba(255,255,255,0.3)">1200</text>
+  <line x1="40" y1="34.9" x2="780" y2="34.9" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="3,4"/>
+  <text x="37" y="37.9" text-anchor="end" font-family="monospace" font-size="8" fill="rgba(255,255,255,0.3)">1300</text>
+  <line x1="40" y1="16.2" x2="780" y2="16.2" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="3,4"/>
+  <text x="37" y="19.2" text-anchor="end" font-family="monospace" font-size="8" fill="rgba(255,255,255,0.3)">1400</text>
+
+  <!-- Peak marker -->
+  <line x1="445.5" y1="5.3" x2="445.5" y2="130" stroke="rgba(201,168,76,0.4)" stroke-width="1" stroke-dasharray="3,3"/>
+  <circle cx="445.5" cy="5.3" r="3" fill="#c9a84c"/>
+  <text x="445.5" y="-2.7" text-anchor="middle" font-family="monospace" font-size="9" fill="#c9a84c">⛰ 1458m</text>
+  <text x="445.5" y="-12.7" text-anchor="middle" font-family="monospace" font-size="8" fill="rgba(201,168,76,0.6)">km 12.3</text>
+
+  <!-- Dip (felle) marker -->
+  <circle cx="198.2" cy="105.5" r="3" fill="#d97730"/>
+  <text x="198.2" y="120.5" text-anchor="middle" font-family="monospace" font-size="8" fill="#d97730">⚠ felle</text>
+
+  <!-- Summit zone label -->
+  <text x="483.4" y="20" text-anchor="middle" font-family="monospace" font-size="8" fill="rgba(201,168,76,0.55)">TOPPPLATÅ km 10.5–16.4</text>
+
+  <!-- Steep descent label -->
+  <text x="723.2" y="20" text-anchor="middle" font-family="monospace" font-size="8" fill="rgba(184,48,48,0.7)">BRATT FINALE</text>
+  <text x="410.0" y="160" text-anchor="middle" font-family="monospace" font-size="8" fill="rgba(255,255,255,0.25)">km</text>
+</svg>
+    <div style="display:flex;gap:20px;margin-top:10px;flex-wrap:wrap;">
+      <span style="font-family:'DM Mono',monospace;font-size:10px;color:rgba(201,168,76,0.7);">■ Toppplatå km 10.5–16.4</span>
+      <span style="font-family:'DM Mono',monospace;font-size:10px;color:rgba(184,48,48,0.7);">■ Bratt finale km 19–22.4</span>
+      <span style="font-family:'DM Mono',monospace;font-size:10px;color:#d97730;">● Fellen ved km 4–5</span>
+      <span style="font-family:'DM Mono',monospace;font-size:10px;color:#c9a84c;">● Topp 1459m</span>
+    </div>
+  </div>
+
+  <div class="section-label">Km-for-km segmentstrategi (GPX-analysert)</div>
+  <div id="race-segments-container">
+    <!-- Rendered by JS from plan.json -->
+    <div style="color:var(--snow-warm);opacity:0.5;font-size:13px">Laster segmenter...</div>
+  </div>
+
+    <div class="section-label">Ernæring og drikke</div>
+  <div class="strategy-grid">
+    <div class="strategy-card">
+      <div class="strategy-card-label">Kvelden før</div>
+      <div class="strategy-card-content">Pasta/ris + protein. Drikk 1,5L vann. Legg deg tidlig.</div>
+    </div>
+    <div class="strategy-card">
+      <div class="strategy-card-label">Løpsmorgen (3t før)</div>
+      <div class="strategy-card-content">Havregrøt eller brød + banan, 500ml vann. 30 min før start: 1 gel + 200ml vann.</div>
+    </div>
+    <div class="strategy-card">
+      <div class="strategy-card-label">Under løpet</div>
+      <div class="strategy-card-content">Gel ved km 7 (under klatringen), km 14 (topp), km 18 (nedstigningen). Drikk ved ALLE drikkestasjoner. Høyde + vedvarende innsats = økt dehydrering.</div>
+    </div>
+    <div class="strategy-card">
+      <div class="strategy-card-label">Minimumsutstyr</div>
+      <div class="strategy-card-content">Terrengsko med grep · Lett jakke · Lue/buff · Minimum 500ml drikkeflaske · 2+ geler · Fulladet telefon</div>
+    </div>
+  </div>
+
+  <div class="section-label">Tidsprognose</div>
+  <div class="strategy-grid">
+    <div class="strategy-card" style="border-color: var(--red);">
+      <div class="strategy-card-label">Optimistisk</div>
+      <div class="strategy-card-content" style="font-family: 'Playfair Display'; font-size: 24px; font-weight: 700; color: var(--snow);">2:50</div>
+    </div>
+    <div class="strategy-card" style="border-color: var(--teal);">
+      <div class="strategy-card-label">Realistisk ★</div>
+      <div class="strategy-card-content" style="font-family: 'Playfair Display'; font-size: 24px; font-weight: 700; color: var(--snow);">3:00–3:10</div>
+    </div>
+    <div class="strategy-card">
+      <div class="strategy-card-label">Konservativt</div>
+      <div class="strategy-card-content" style="font-family: 'Playfair Display'; font-size: 24px; font-weight: 700; color: var(--snow);">3:20+</div>
+    </div>
+  </div>
+  <p style="font-size:12px; opacity:0.6; color:var(--snow-warm); margin-top:8px;">Basert på Lommedalen Rundt (18,6km +672m på 2:09) og Ivar Formos (16km +442m på 1:50). Norefjell er vanskeligere per km.</p>
+
+  <div class="section-label" style="margin-top:24px;">Mentale nøkkelpunkter</div>
+  <div id="mental-points-container"></div>
+</div>
+
+<!-- COACHING NOTES VIEW -->
+<div id="view-coaching" class="view">
+  <div class="section-label">Viktigste funn fra treningsanalysen</div>
+  <div class="section-title">Coaching-notater</div>
+  <div class="notes-list">
+    <div class="note-card">
+      <div class="note-issue">⚡ Problem 1: Grå-sone-trening — for hardt på lette dager</div>
+      <div class="note-detail">Din gjennomsnittlige hjertefrekvens på ALLE løp de siste 2 år er 158,9 bpm — dette er sone 3 (tempo). De fleste av dine "lette" løp er faktisk moderate innsatser. Dette er det klassiske gray zone-problemet: du går for hardt til at det gir ordentlig aerob restitusjon, men for lett til at det gir sterkest mulig anaerobt stimulus. Resultatet er mediokre tilpasning i begge retninger.</div>
+      <div class="note-fix">Når planen sier lett: mål HR 143–157 bpm. Senk farten til du holder deg under 157. Det vil føles pinlig sakte — det er riktig og normalt. Etter 4–6 uker løper du raskere ved samme HR.</div>
+    </div>
+    <div class="note-card">
+      <div class="note-issue">⛰ Problem 2: Utilstrekkelig bakketrening for dette løpet</div>
+      <div class="note-detail">Norefjell 22K har 897m stigning — nesten utelukkende i første halvdel (12km). Treningsområdet i Eiksmarka er relativt flatt. Gjennomsnittlig ukentlig stigning de siste 12 ukene er kun +320m/uke, mens løpet krever nesten 900m i én økt. Uten spesifikk klatretilpasning vil musklene (setemuskulatur, hoftefleksorer, legger) og kardiovaskulær kapasitet mangle nødvendig toleranse.</div>
+      <div class="note-fix">Kjør til Kolsåstoppen, Vettakollen, Lysakerelva-dalen eller Krokskogen for dedikerte bakke-sessions. Øv på power-hiking (rask og effektiv gange) på gradienter over ~25% — det er raskere enn treg jogging på bratte partier.</div>
+    </div>
+    <div class="note-card">
+      <div class="note-issue">📉 Problem 3: Volumujevnhet — jan/feb 2026 var for sparsomt</div>
+      <div class="note-detail">I januar og februar 2026 var treningen svært sparsom — ofte bare 1–2 løp per uke, noen ganger ingenting i hele uker. Det gir et 12-ukers snitt på kun 19,2 km/uke, til tross for at de siste 4 ukene viser 32,6 km/uke. Konsistens er den mest undervurderte faktoren i utholdenhetstrening — en stabil 30km/uke er mer verdifullt enn sporadiske 50km-uker.</div>
+      <div class="note-fix">Denne planen prioriterer 4–5 løp per uke, hver uke. Barnehage- og skolekjøring-rundene er faktisk perfekte for dette — bruk dem som faste, lette løp.</div>
+    </div>
+    <div class="note-card">
+      <div class="note-issue">🦵 Problem 4: Excentrisk quadricepsstyrke for 900m nedstigning</div>
+      <div class="note-detail">Den lange nedstigningen (900m over ~7km) er ekstremt belastende for quadriceps. Uten spesifikk excentrisk styrke vil quadsen begynne å gi seg rundt km 16–18, noe som kan bety gånge-tempo de siste 4–6km. Ingen synlig styrketrening i Strava-loggen din.</div>
+      <div class="note-fix">Inkluder step-downs (3×15 hvert ben) og Bulgarian split squats (3×12) 1–2 ganger per uke. Nedoverbakke-løping i trening bygger også dette — det er en av grunnene til at planen inkluderer back-to-back-helgedager og race-simulering med nedstigning.</div>
+    </div>
+    <div class="note-card" style="border-left-color: var(--teal);">
+      <div class="note-issue" style="color: var(--teal-light);">ℹ Power-hiking: Din hemmelighet på Norefjell</div>
+      <div class="note-detail">For partier med gradient over ~20–25% på Norefjell-klatringen er rask og effektiv gange (power-hiking) faktisk raskere enn langsom jogging for de fleste løpere — og mye mer bærekraftig. Det sparer quad-kreftene til nedstigningen der de virkelig trengs.</div>
+      <div class="note-fix">Øv teknikken: kropp framover, hender på lårene for ekstra framdrift, aggressiv armdrive, korte raske steg. Bestem deg for å hike de bratteste seksjonene på løpsdagen — ikke la stolthet få deg til å jobbe for hardt for tidlig.</div>
+    </div>
+  </div>
+</div>
+
+<script>
+async function loadPlan() {
+  try {
+    const res = await fetch('./plan.json');
+    if (!res.ok) throw new Error('Failed: ' + res.status);
+    return await res.json();
+  } catch (e) {
+    document.body.innerHTML = '<div style="color:#e07070;font-family:monospace;padding:40px">Error loading plan.json: ' + e.message + '</div>';
+    throw e;
+  }
+}
+
+let planData = null;
+
+// Kick off data load immediately
+loadPlan().then(data => {
+  planData = data;
+  renderWeeks();
+  renderRaceStrategy();
+  loadDoneState();
+}).catch(() => {});
+
+function showView(name, btn) {
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('view-' + name).classList.add('active');
+  if (btn) {
+    btn.classList.add('active');
+  } else {
+    const match = document.querySelector('.nav-btn[onclick*="' + name + '"]');
+    if (match) match.classList.add('active');
+  }
+}
+
+function getTypeClass(type) {
+  const map = {
+    'rest': 'type-rest', 'easy': 'type-easy', 'hill_repeat': 'type-hill',
+    'tempo': 'type-tempo', 'threshold': 'type-threshold', 'long': 'type-long',
+    'trail_medium': 'type-trail', 'trail_easy': 'type-trail', 'trail_trail': 'type-trail',
+    'race': 'type-race', 'fartlek': 'type-fartlek', 'race_simulation': 'type-race-sim',
+    'sustained_climb': 'type-climb', 'medium_long': 'type-long', 'back_to_back': 'type-trail'
+  };
+  return map[type] || 'type-easy';
+}
+
+function getPhaseClass(phase) {
+  const map = { 'Oppbygging': 'phase-build', 'Restitusjonsuke': 'phase-recovery', 'Spesifisitet': 'phase-specificity', 'Toppuke': 'phase-peak', 'Nedtrapping': 'phase-taper' };
+  return map[phase] || 'phase-build';
+}
+
+function getTypeLabel(type) {
+  const map = {
+    'rest': 'Hvile', 'easy': 'Lett løp', 'hill_repeat': 'Bakkeintervaller',
+    'tempo': 'Tempo', 'threshold': 'Terskelintervaller', 'long': 'Langtur',
+    'trail_medium': 'Trailløp', 'trail_easy': 'Lett trailtur',
+    'race': '🏆 LØPSDAG', 'fartlek': 'Fartlek', 'race_simulation': '🏔 Race-simulering',
+    'sustained_climb': '🏔 Klatreøkt', 'medium_long': 'Medium langtur', 'back_to_back': 'Back-to-back'
+  };
+  return map[type] || type;
+}
+
+function renderRaceStrategy() {
+  if (!planData) return;
+  const rs = planData.raceStrategy;
+
+  // Render segments
+  const segContainer = document.getElementById('race-segments-container');
+  if (segContainer && rs.courseSegments) {
+    const gradColors = {
+      'up-easy': '#4a8fa3', 'up-mod': '#c9a84c', 'up-hard': '#d97730', 'up-extreme': '#c03a3a',
+      'down-easy': '#4a8fa3', 'down-mod': '#2a8a7f', 'down-hard': '#d97730', 'down-extreme': '#c03a3a'
+    };
+
+    let html = '';
+    for (const seg of rs.courseSegments) {
+      const isDescending = seg.loss_m > seg.gain_m;
+      const netEle = isDescending ? -seg.loss_m : seg.gain_m;
+      const arrow = isDescending ? '↓' : '↑';
+      const color = seg.segment.includes('19') || seg.segment.includes('22') ? 'var(--red)' :
+                    seg.segment.includes('5–10') ? 'var(--orange)' :
+                    seg.segment.includes('12–16') ? 'var(--teal)' : 'var(--gold)';
+
+      html += `<div class="seg-card">
+        <div class="seg-header">
+          <div class="seg-km" style="color:${color}">${seg.segment}</div>
+          <div class="seg-name">${seg.navn}</div>
+          <div class="seg-stats">
+            <span>${arrow} ${isDescending ? seg.loss_m : seg.gain_m}m</span>
+            <span class="seg-hr">${seg.target_hr}</span>
+          </div>
+        </div>
+        <div class="seg-gradient-bar">
+          <div class="seg-gradient-fill" style="background:${color};width:${Math.min(Math.abs(parseFloat(seg.avgGradient))*5, 100)}%"></div>
+          <span class="seg-gradient-label">${seg.avgGradient}</span>
+        </div>
+        <div class="seg-keyfact">⚡ ${seg.keyFact}</div>
+        <div class="seg-strat">→ ${seg.strategy}</div>
+        ${seg.powerHikeZones ? '<div class="seg-hike">Power-hike: ' + seg.powerHikeZones.join(' · ') + '</div>' : ''}
+      </div>`;
+    }
+    segContainer.innerHTML = html;
+  }
+
+  // Render mental points
+  const mentalContainer = document.getElementById('mental-points-container');
+  if (mentalContainer && rs.keyMentalPoints) {
+    mentalContainer.innerHTML = rs.keyMentalPoints.map(p =>
+      `<div class="mental-point">💡 ${p}</div>`
+    ).join('');
+  }
+}
+
+function renderWeeks() {
+  const container = document.getElementById('weeks-container');
+  let html = '';
+  for (const week of planData.weeks) {
+    const isRecovery = week.isRecoveryWeek;
+    const isRace = week.weekNumber === 11;
+    const isPeak = week.phase === 'Peak';
+    const cardClass = isRecovery ? 'recovery-week' : (isPeak ? 'peak-week' : '');
+    const stats = week.summary?.bySport?.run || {};
+    const startD = new Date(week.startDate);
+    const endD = new Date(week.endDate);
+    const dateStr = startD.toLocaleDateString('no-NO', {month:'short',day:'numeric'}) + ' – ' + endD.toLocaleDateString('no-NO', {month:'short',day:'numeric'});
+
+    html += `<div class="week-card ${cardClass}" id="week-${week.weekNumber}" data-phase="${week.phase}">
+      <div class="week-header" onclick="toggleWeek(${week.weekNumber})">
+        <div class="week-number">${week.weekNumber}</div>
+        <div class="week-info">
+          <span class="week-phase-tag ${getPhaseClass(week.phase)}">${week.phase}${isRecovery ? ' 🔄' : ''}</span>
+          <div class="week-dates">${dateStr}</div>
+          <div class="week-focus">${week.focus}</div>
+        </div>
+        <div class="week-stats">
+          ${stats.km ? `<div class="week-stat"><div class="week-stat-val">${Math.round(stats.km)}km</div><div class="week-stat-lbl">distanse</div></div>` : ''}
+          ${stats.elev ? `<div class="week-stat"><div class="week-stat-val">+${stats.elev}m</div><div class="week-stat-lbl">stigning</div></div>` : ''}
+          ${stats.hours ? `<div class="week-stat"><div class="week-stat-val">${stats.hours}t</div><div class="week-stat-lbl">timer</div></div>` : ''}
+        </div>
+        <div class="week-chevron">▼</div>
+      </div>
+      <div class="week-body">
+        <div class="day-list">`;
+
+    for (const day of week.days) {
+      for (const workout of day.workouts) {
+        const isRun = workout.sport === 'run';
+        const typeClass = getTypeClass(workout.type);
+        const typeLbl = getTypeLabel(workout.type);
+        const dayShort = day.dayOfWeek.substring(0,3).toUpperCase();
+        html += `<div class="day-row">
+          <div class="day-name">${dayShort}</div>
+          <div class="workout-block">
+            <span class="workout-type-tag ${typeClass}">${typeLbl}</span>
+            <div class="workout-name">${workout.name}</div>
+            <div class="workout-desc">${workout.description.split('\n').join('<br>')}</div>
+            ${isRun ? `<div class="workout-meta">
+              ${workout.distanceKm ? `<span class="workout-meta-item">📏 ${workout.distanceKm}km</span>` : ''}
+              ${workout.elevation ? `<span class="workout-meta-item">⛰ +${workout.elevation}m</span>` : ''}
+              ${workout.durationMinutes ? `<span class="workout-meta-item">⏱ ${workout.durationMinutes} min</span>` : ''}
+              ${workout.primaryZone ? `<span class="workout-meta-item">💓 ${workout.primaryZone}</span>` : ''}
+            </div>` : ''}
+          </div>
+          <div class="workout-checkbox ${workout.completed ? 'done' : ''}" onclick="toggleDone('${workout.id}', this)" title="Merk som fullført"></div>
+        </div>`;
+      }
+    }
+
+    html += `</div></div></div>`;
+  }
+  container.innerHTML = html;
+
+  // Open current/upcoming week by default
+  const today = new Date();
+  for (const week of planData.weeks) {
+    const s = new Date(week.startDate), e = new Date(week.endDate);
+    if (today >= s && today <= e) {
+      document.getElementById('week-' + week.weekNumber)?.classList.add('open');
+      return;
+    }
+  }
+  // Default open week 1
+  document.getElementById('week-1')?.classList.add('open');
+}
+
+function toggleWeek(num) {
+  const el = document.getElementById('week-' + num);
+  el.classList.toggle('open');
+}
+
+function toggleDone(id, el) {
+  el.classList.toggle('done');
+  // Save to localStorage
+  const saved = JSON.parse(localStorage.getItem('norefjell-done') || '{}');
+  if (el.classList.contains('done')) saved[id] = true;
+  else delete saved[id];
+  localStorage.setItem('norefjell-done', JSON.stringify(saved));
+}
+
+function loadDoneState() {
+  try {
+    const saved = JSON.parse(localStorage.getItem('norefjell-done') || '{}');
+    for (const id in saved) {
+      const el = document.querySelector(`[onclick*="${id}"]`);
+      if (el) el.classList.add('done');
+    }
+  } catch(e) {}
+}
+
+function scrollToPhase(phase) {
+  const el = document.querySelector(`[data-phase="${phase}"]`);
+  if (el) { showView('plan'); el.scrollIntoView({behavior:'smooth', block:'start'}); }
+}
+
+// Initialisation handled by loadPlan().then() above
+</script>
+</body>
+</html>
