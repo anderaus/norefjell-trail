@@ -915,13 +915,13 @@
             {
               "id": "w5-sun-long",
               "sport": "run",
-              "type": "long",
-              "name": "Langtur — 18km",
-              "description": "18km, første 12km lett Z2, siste 6km Z3 aerob. Finn en rute med ~400m stigning. Brunkollen-Skuta eller lignende. Gel ved 60 og 90min.",
-              "durationMinutes": 120,
-              "distanceKm": 18,
-              "elevation": 380,
-              "primaryZone": "Sone 2-3",
+              "type": "easy",
+              "name": "Lett restitusjonstur — flat og rolig",
+              "description": "Etter lørdagens tunge klatreøkt (race-innsats, +450m) er dette en ren restitusjonstur. 13km på flatt underlag — veier, grusvei eller flat sti. HR UNDER 150 bpm hele veien. Ingen stigning å sikte mot. Ingen fart å sjekke. Bare beina i bevegelse for å skylle ut tretthet og holde sirkulasjonen i gang. Hvis beina kjennes tunge, er det et tegn på at lørdagsøkten slo til — dette er akkurat slik det skal være.",
+              "durationMinutes": 80,
+              "distanceKm": 13,
+              "elevation": 80,
+              "primaryZone": "Sone 1-2 — MAKS HR 150",
               "completed": false
             }
           ]
@@ -934,7 +934,7 @@
             "sessions": 4,
             "hours": 5.0,
             "km": 48,
-            "elev": 830
+            "elev": 530
           }
         }
       }
@@ -1186,12 +1186,12 @@
               "id": "w7-sun-long",
               "sport": "run",
               "type": "long",
-              "name": "Langtur — 19km +400m",
-              "description": "19km, mål 400m stigning. Brunkollen + Skuta + Fossum, eller Bogstadvannet + stor runde. Første 13km lett Z2, siste 6km Z3 aerob. Nær Norefjell-distansen — viktig for selvtilliten. Gel hvert 45-50min.",
-              "durationMinutes": 125,
-              "distanceKm": 19,
-              "elevation": 420,
-              "primaryZone": "Sone 2-3",
+              "name": "Langtur — 16km moderat",
+              "description": "Uke 7 er tredje harde uke på rad — kumulativ tretthet er høy. Langtur på 16km med begrenset stigning (~200m). Ikke jakt maksimalt høydemeter i dag. Finn en variert sti-/grusvei-rute, HR 148-162 snitt. De siste 4km kan kjøres litt hardere (Z3, HR 158-164) om beina tillater det — men bare hvis du virkelig føler deg bra. Gel ved 60min. Dette er planens nest lengste langtur, og den kommer på slutten av en krevende blokk — respekter det.",
+              "durationMinutes": 100,
+              "distanceKm": 16,
+              "elevation": 200,
+              "primaryZone": "Sone 2, siste 4km Sone 2-3",
               "completed": false
             }
           ]
@@ -1203,8 +1203,8 @@
           "run": {
             "sessions": 4,
             "hours": 5.2,
-            "km": 48,
-            "elev": 740
+            "km": 45,
+            "elev": 520
           }
         }
       }
@@ -1433,13 +1433,13 @@
             {
               "id": "w9-sat-medium",
               "sport": "run",
-              "type": "trail_medium",
-              "name": "Moderat trailtur",
-              "description": "12km trail, HR 150-165. Ikke noe voldsomt — spar kreftene til søndagens topptur. Nygård-Sæteren eller Hilderunden.",
-              "durationMinutes": 78,
-              "distanceKm": 12,
-              "elevation": 240,
-              "primaryZone": "Sone 2-3",
+              "type": "easy",
+              "name": "Aktiv hvile — beinene settes opp til topptur",
+              "description": "Søndagens 20km +700m topptur er planens viktigste økt. Lørdagen handler utelukkende om å ankomme søndagen med friske bein. 10km på flat grusvei eller rolig sti, HR UNDER 148 bpm. Ingen bakker. Ingen press. Løp sakte nok til at du kan prate uanstrengt gjennom hele turen. Spis godt etter turen og sov tidlig. Du gjør søndagen bedre ved å ta det rolig i dag.",
+              "durationMinutes": 62,
+              "distanceKm": 10,
+              "elevation": 80,
+              "primaryZone": "Sone 1 — maks HR 148",
               "completed": false
             }
           ]
@@ -1469,8 +1469,8 @@
           "run": {
             "sessions": 4,
             "hours": 5.8,
-            "km": 51,
-            "elev": 940
+            "km": 49,
+            "elev": 780
           }
         }
       }
